@@ -8,7 +8,7 @@
   </InputFileArray>
   <OutputType value="2" high="3" low="0" initialValue="0" />
   <OutputDir value="C:\Users\comet\Desktop\CTD_OP38_41_42\processamento_da_op41" />
-  <NameAppend value="_TESTE_COMPARE" />
+  <NameAppend value="" />
   <OutputFile value="operantar_41_001.jpg" />
   <LastProcessed value="0" />
   <PrintSetup >
@@ -60,9 +60,10 @@
   <PrintSizeFrom value="0" high="2" low="0" initialValue="0" />
   <Axis index="0" >
     <IncludeAxis value="1" />
-    <CalcID value="65" />
-    <Calc UnitID="3" Ordinal="0" >
-      <FullName value="Pressure, Digiquartz [db]" />
+    <CalcID value="17" />
+    <Calc UnitID="31" Ordinal="0" >
+      <FullName value="Depth [salt water, m]" />
+      <Latitude value="0.000000" />
     </Calc>
     <Derived value="0" />
     <ShowDateTime value="0" />

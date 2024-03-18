@@ -955,6 +955,13 @@ while True:
                                 arquivo.write('\ntrans  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'trans.psa' + ' /f' + replace + '%1.cnv' + ' /o' +  str(pasta_processados))
                         if i == '20':
                             with open(bat, 'a') as arquivo:
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                            confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
+                            if confere_seaplot == 's':
+                                with open(bat, 'a') as arquivo:
+                                    arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                        if i == '20':
+                            with open(bat, 'a') as arquivo:
                                 arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
                             confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
                             if confere_seaplot == 's':

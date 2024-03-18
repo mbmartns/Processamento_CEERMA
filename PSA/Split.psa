@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Split >
+  <Version value="7.26.7.129" />
+  <ServerName value="Split" />
+  <InputDir value="C:\Users\CEERMA\Documents\CTD\PROC_OP42\CTDPROC" />
+  <InputFileArray size="1" GrowBy="-1" >
+    <ArrayItem index="0" value="OP42_001.cnv" />
+  </InputFileArray>
+  <OutputDir value="C:\Users\CEERMA\Documents\CTD\PROC_OP42\CTDPROC" />
+  <NameAppend value="" />
+  <OutputFile value="OP42_001" />
+  <LastProcessed value="0" />
+  <OutputFiles value="0" high="1" low="0" initialValue="0" />
+  <ExcludeMarkedBad value="1" />
+</Split>

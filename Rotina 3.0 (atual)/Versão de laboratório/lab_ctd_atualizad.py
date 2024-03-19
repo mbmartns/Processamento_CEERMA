@@ -932,8 +932,7 @@ while True:
                         if i == '08':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nbinavg  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'binavg.psa' +  ' /f' + replace + '%1.cnv' + ' /o' + str(pasta_processados))
-                        if i == '10':
-                            
+                        if i == '10':      
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nmarkscan /i' + str(name_dir) + str(replace) + '%1.mrk' + ' ' + '/p' + str(name_psa) + 'markscan.psa' + ' /f' + replace + '%1.bsr' + ' /o' +  str(pasta_processados))
                         if i == '11':
@@ -954,20 +953,28 @@ while True:
                         if i == '19':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\ntrans  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'trans.psa' + ' /f' + replace + '%1.cnv' + ' /o' +  str(pasta_processados))
+       #                 if i == '20':
+        #                    with open(bat, 'a') as arquivo:
+         #                       arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+          #                  confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
+           #                 if confere_seaplot == 's':
+            #                    with open(bat, 'a') as arquivo:
+             #                       arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                        
                         if i == '20':
                             with open(bat, 'a') as arquivo:
-                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
-                            confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
-                            if confere_seaplot == 's':
-                                with open(bat, 'a') as arquivo:
-                                    arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
-                        if i == '20':
-                            with open(bat, 'a') as arquivo:
-                                arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
-                            confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
-                            if confere_seaplot == 's':
-                                with open(bat, 'a') as arquivo:
-                                    arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_compare_c.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_compare_o.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_compare_t.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_diff_c.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_diff_t.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+                                arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_ts2.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
+
+        #                    confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
+         #                   if confere_seaplot == 's':
+          #                      with open(bat, 'a') as arquivo:
+           #                         arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
                         if i == '09':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nbottlesum  /i' + str(pasta_processados) + '//' + str(replace) + '%1.ros' + ' ' + '/p' + str(name_psa) + 'bottlesum.psa' + ' /f' + replace + '%1.BTL' + ' /o' + str(caminho_garrafa) + ' /c' + str(name_dir + replace) + arq_configu)

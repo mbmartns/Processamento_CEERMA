@@ -1,0 +1,35 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = C:\Users\Dell\Desktop\Operantar XLI\Raw\OP41002.hdr
+* Software Version Seasave V 7.26.7.110
+* Temperature SN = 6497
+* Conductivity SN = 4954
+* Number of Bytes Per Scan = 31
+* Number of Voltage Words = 2
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Oct 17 2022 21:02:18
+* NMEA Latitude = 37 16.72 S
+* NMEA Longitude = 048 37.48 W
+* NMEA UTC (Time) = Oct 17 2022 21:01:25
+* Store Lat/Lon Data = Append to Every Scan
+* SBE 11plus V 5.2
+* number of scans to average = 1
+* pressure baud rate = 9600
+* NMEA baud rate = 4800
+* GPIB address = 1
+* advance primary conductivity  0.073 seconds
+* advance secondary conductivity  0.073 seconds
+* autorun on power up is disabled
+* S>
+** H41 
+** Navio Polar Almirante Maximiano 
+** LH-021/2022 
+** Operantar XLI 
+** Número da Estação 002
+** Latitude 37ª16.719
+** Longitude 048ª37.474
+** Data/Hora (Z) 17/10/2022 2100Z
+** Profundidade local 
+** 09-1439 
+** Nome do Operador 1T FILIPE LOPES
+* System UTC = Oct 17 2022 21:02:18
+*END*

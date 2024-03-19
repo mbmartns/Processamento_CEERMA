@@ -1,0 +1,25 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = D:\OPERANTAR_XXXVIII\DADOS\OP38_014.hdr
+* Software Version Seasave V 7.18c
+* Temperature SN = 4808
+* Conductivity SN = 3380
+* Number of Bytes Per Scan = 34
+* Number of Voltage Words = 3
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Nov 05 2019 06:04:16
+* NMEA Latitude = 62 11.37 S
+* NMEA Longitude = 058 03.45 W
+* NMEA UTC (Time) = Nov 05 2019 06:03:04
+* Store Lat/Lon Data = Append to Every Scan
+** H41 
+** NAVIO POLAR ALMIRANTE MAXIMIANO 
+** CRUZEIRO: 
+** OPERANTAR XXXVIII 
+** ESTAÇÃO: OP38_014
+** LAT 62 11,38' S
+** LONG 058 03,41' W
+** 09P73767-1155_A 
+** PROFUNDIDADE: 480
+** DATA/HORA: 050604Z/NOV/2019
+** OPERADOR: SO-HN CHAVES
+*END*

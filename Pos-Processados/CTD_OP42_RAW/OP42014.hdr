@@ -1,0 +1,36 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = C:\Users\Hidrografia\Desktop\OPXLII\Brutos\OP42014.hdr
+* Software Version Seasave V 7.26.7.107
+* Temperature SN = 6502
+* Conductivity SN = 4998
+* Number of Bytes Per Scan = 31
+* Number of Voltage Words = 2
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Oct 20 2023 10:58:39
+* NMEA Latitude = 47 05.79 S
+* NMEA Longitude = 056 32.90 W
+* NMEA UTC (Time) = Oct 20 2023 10:58:48
+* Store Lat/Lon Data = Append to Every Scan
+* SBE 11plus V 5.2
+* number of scans to average = 1
+* pressure baud rate = 9600
+* NMEA baud rate = 4800
+* Latitude/Longitude added to scan
+* GPIB address = 1
+* advance primary conductivity  0.073 seconds
+* advance secondary conductivity  0.073 seconds
+* delete word 7 from scan
+* delete word 8 from scan
+* autorun on power up is disabled
+* S>
+** H41 
+** NPOALTEMAXIMIANO 
+**  
+** NUMERO DA ESTACAO (XXX) 014
+** LAT (XX XX.XX S/N) 47 05.592 S
+** LONG (XXX XX.XX W/E) 056 32.757 W
+** DATAHORA (dd/mm/aaaa hh:mm Z) 20/10/2023 1058Z
+** PROFUNDIDADE (m) 4459
+** OPERADOR CT FABIREZA
+* System UTC = Oct 20 2023 10:58:39
+*END*

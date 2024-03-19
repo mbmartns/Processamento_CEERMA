@@ -932,7 +932,7 @@ while True:
                         if i == '08':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nbinavg  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'binavg.psa' +  ' /f' + replace + '%1.cnv' + ' /o' + str(pasta_processados))
-                        if i == '10':      
+                        if i == '10':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nmarkscan /i' + str(name_dir) + str(replace) + '%1.mrk' + ' ' + '/p' + str(name_psa) + 'markscan.psa' + ' /f' + replace + '%1.bsr' + ' /o' +  str(pasta_processados))
                         if i == '11':

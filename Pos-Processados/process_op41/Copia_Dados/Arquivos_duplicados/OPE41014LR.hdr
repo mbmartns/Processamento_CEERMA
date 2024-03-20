@@ -1,0 +1,38 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = C:\Users\Dell\Desktop\OperantarXLI\config\00_BRUTOS\OPE41014LR.hdr
+* Software Version Seasave V 7.26.7.110
+* Temperature SN = 6497
+* Conductivity SN = 4954
+* Number of Bytes Per Scan = 31
+* Number of Voltage Words = 2
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Oct 25 2022 11:28:08
+* NMEA Latitude = 45 53.01 S
+* NMEA Longitude = 058 29.32 W
+* NMEA UTC (Time) = Oct 25 2022 11:27:01
+* Store Lat/Lon Data = Append to Every Scan
+* SBE 11plus V 5.2
+* number of scans to average = 1
+* pressure baud rate = 9600
+* NMEA baud rate = 4800
+* Latitude/Longitude added to scan
+* GPIB address = 1
+* advance primary conductivity  0.073 seconds
+* advance secondary conductivity  0.073 seconds
+* delete word 7 from scan
+* delete word 8 from scan
+* autorun on power up is disabled
+* S>
+** H41 
+** Navio Polar Almirante Maximiano 
+** LH-021/2022  
+** Operantar XLI 
+** Número da Estação 014
+** Latitude 45 53.086 S
+** Longitude 058 29.226 W
+** Data/Hora (Z) 25/10/2022 1127Z
+** Profundidade local 2647 m
+** 09-1439 
+** Nome do Operador CT GARLA
+* System UTC = Oct 25 2022 11:28:08
+*END*

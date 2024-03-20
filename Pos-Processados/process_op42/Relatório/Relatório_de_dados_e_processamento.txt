@@ -1,0 +1,144 @@
+RELATÓRIO DE DADOS E PROCESSAMENTO
+O relatório presente fornece todas as informações obtidas a partir dos dados brutos.
+Por favor, cheque todas as informações e adicione o que achar relevante para o processamento dos dados.
+
+Foram copiados 262 arquivos.
+Há 52 arquivos do tipo HEX
+52 arquivos do tipo BL
+52 arquivos do tipo HDR
+52 arquivos do tipo MRK
+52 arquivos do tipo XMLCON
+0 arquivos do tipo CON
+Há 2 outros tipos de arquivos:
+C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op42\Copia_Dados\Arquivos_duplicados
+C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op42\Copia_Dados\operantar42_
+Todas as estações estão completas.
+
+Durante o processamento foi criado um novo Batch File, chamado batch_42.txt.
+O Batch File utilizado está configurado para realizar os seguintes processamentos:
+
+Data Conversion
+Align CTD
+Wild Edit
+Filter
+Cell Thermal Mass
+Loop Edit
+Window Filter
+Derive
+Derive TEOS-10
+Bin Average
+Sea Plot
+Strip
+Split
+Bottle Summary
+
+Foram processadas as seguintes estações:
+Estação 001
+
+Foram processadas as seguintes estações:
+Estação 001
+Estação 002
+Estação 003
+Estação 005
+Estação 007
+Estação 008
+Estação 009
+Estação 010
+Estação 011
+Estação 012
+Estação 013
+Estação 014
+Estação 015
+Estação 016
+Estação 017
+Estação 018
+Estação 019
+Estação 020
+Estação 021
+Estação 022
+Estação 023
+Estação 024
+Estação 025
+Estação 026
+Estação 027
+Estação 028
+Estação 029
+Estação 030
+Estação 031
+Estação 032
+Estação 033
+Estação 034
+Estação 035
+Estação 036
+Estação 037
+Estação 038
+Estação 039
+Estação 040
+Estação 041
+Estação 042
+Estação 043
+Estação 044
+Estação 045
+Estação 046
+Estação 047
+Estação 048
+Estação 049
+Estação 050
+Estação 051
+Estação 052
+Estação 053
+Estação 054
+
+Foram processadas as seguintes estações:
+Estação 001
+Estação 002
+Estação 003
+Estação 005
+Estação 007
+Estação 008
+Estação 009
+Estação 010
+Estação 011
+Estação 012
+Estação 013
+Estação 014
+Estação 015
+Estação 016
+Estação 017
+Estação 018
+Estação 019
+Estação 020
+Estação 021
+Estação 022
+Estação 023
+Estação 024
+Estação 025
+Estação 026
+Estação 027
+Estação 028
+Estação 029
+Estação 030
+Estação 031
+Estação 032
+Estação 033
+Estação 034
+Estação 035
+Estação 036
+Estação 037
+Estação 038
+Estação 039
+Estação 040
+Estação 041
+Estação 042
+Estação 043
+Estação 044
+Estação 045
+Estação 046
+Estação 047
+Estação 048
+Estação 049
+Estação 050
+Estação 051
+Estação 052
+Estação 053
+Estação 054

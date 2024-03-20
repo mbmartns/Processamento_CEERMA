@@ -49,6 +49,7 @@ def ler_linha_de_cada_arquivo(diretorio_origem, diretorio_destino):
                         continue
                 # Escreve as linhas restantes no arquivo original
             with open(caminho_arquivo, 'w') as arquivo_origem:
+                arquivo_origem.write('Test 1 => T2-T190C: Temperature Difference, 2 - 1 [ITS-90, deg C] < 0.005\nTest 2 => C2-C1S/m: Conductivity Difference, 2 - 1 [S/m] < 0.005\n\n\n')
                 for linha in linhas_restantes:
                     arquivo_origem.write(linha)
 
@@ -69,32 +70,92 @@ def conferir_dados(diretorio_destino):
         if arquivo.endswith('.cnv'):  # Verifica se é um arquivo de texto
 
             # Abre o arquivo e lê linha por linha
-            with open(caminho_arquivo, 'r') as cnv_tratado:
+            # with open(caminho_arquivo, 'r+') as cnv_tratado:
 
-                for linha in cnv_tratado:
+            #     for linha in cnv_tratado:
+            #         # Divide a linha em colunas usando espaços como delimitador
+            #         colunas = linha.split()
+
+            #         # Verifica se existem pelo menos 10 colunas e se a décima coluna é um número
+            #         if len(colunas) >= 10 and colunas[10].replace('.', '').isdigit():
+            #             valor_temp = float(colunas[10])
+            #             valor_cond = float(colunas[16])
+            #             #print(valor_cond)
+            #             # Verifica se o valor é maior que 0.005
+            #             if valor_temp > 0.005:
+            #                 #print(valor)
+            #                 valores_temp_maior.append(valor_temp)
+            #                 cnv_tratado.write('\tF')
+            #             else:
+            #                 cnv_tratado.write('\tT')
+
+            #             if valor_cond > 0.005:
+            #                 #print(valor_cond)
+            #                 valores_cond_maior.append(valor_cond)
+            #                 cnv_tratado.write('F')
+            #             else:
+            #                 cnv_tratado.write('T')
+
+            with open(caminho_arquivo, 'r+') as cnv_tratado:
+                # Lê cada linha do arquivo e armazena em uma lista
+                linhas = cnv_tratado.readlines()
+
+                # Retorna ao início do arquivo
+                cnv_tratado.seek(0)
+
+                # Percorre cada linha armazenada
+                for linha in linhas:
                     # Divide a linha em colunas usando espaços como delimitador
                     colunas = linha.split()
+                    resultado = '\t'
 
-                    # Verifica se existem pelo menos 10 colunas e se a décima coluna é um número
-                    if len(colunas) >= 10 and colunas[10].replace('.', '').isdigit():
+                    
+                    if len(colunas) >= 16: #and colunas[10].replace('.', '').isdigit():
                         valor_temp = float(colunas[10])
                         valor_cond = float(colunas[16])
-                        #print(valor_cond)
-                        # Verifica se o valor é maior que 0.005
+
+                        valor_temp = abs(valor_temp)
+                        valor_cond = abs(valor_cond)
+
+                        resultado = '\t'
+                        # Verifica se o valor é maior que 0.005 e atualiza a linha
                         if valor_temp > 0.005:
-                            #print(valor)
                             valores_temp_maior.append(valor_temp)
+
+                            resultado += 'F'
+                         #   linha += resultado
+
+                        else:
+                            resultado += 'T'
+                         #   linha += resultado
+
+
                         if valor_cond > 0.005:
-                            #print(valor_cond)
                             valores_cond_maior.append(valor_cond)
-                    # Verifica se o valor é maior que 0.005
-                        if valor_temp <= 0.005 and valor_cond <= 0.005:
-                        # Se não for, adiciona a linha à lista de linhas válidas
-                            linhas_validas.append(linha)
-            # Reescreve o arquivo apenas com as linhas válidas
-            with open(caminho_arquivo, 'w') as cnv_tratado:
-                for linha in linhas_validas:
+                          #  linha += 'F'
+                            resultado += 'F'
+
+                        else:
+                           # linha += 'T'
+                            resultado += 'T'
+                           # linha += resultado
+                        # Modifica a linha com o resultado
+                        linha = linha.rstrip('\n') + resultado + '\n'
+
+                    # Escreve a linha modificada de volta no arquivo
                     cnv_tratado.write(linha)
+
+                # Trunca o restante do arquivo caso o novo conteúdo seja menor
+            #    cnv_tratado.truncate()
+                            
+                    # Verifica se o valor é maior que 0.005
+                  #      if valor_temp <= 0.005 and valor_cond <= 0.005:
+                        # Se não for, adiciona a linha à lista de linhas válidas
+                   #         linhas_validas.append(linha)
+            # Reescreve o arquivo apenas com as linhas válidas
+           # with open(caminho_arquivo, 'w') as cnv_tratado:
+            #    for linha in linhas_validas:
+             #       cnv_tratado.write(linha)
         qtt_temp = len(valores_temp_maior)
         qtt_cond = len(valores_cond_maior)
         

@@ -961,6 +961,8 @@ while True:
             #                    with open(bat, 'a') as arquivo:
              #                       arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
                         
+                
+                        
                         if i == '20':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_compare_c.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))

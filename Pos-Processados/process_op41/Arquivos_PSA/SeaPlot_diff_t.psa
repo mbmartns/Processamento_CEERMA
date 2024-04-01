@@ -85,9 +85,9 @@
   </Axis>
   <Axis index="1" >
     <IncludeAxis value="1" />
-    <CalcID value="13" />
-    <Calc UnitID="58" Ordinal="0" >
-      <FullName value="Conductivity Difference, 2 - 1 [S/m]" />
+    <CalcID value="82" />
+    <Calc UnitID="6" Ordinal="0" >
+      <FullName value="Temperature Difference, 2 - 1 [ITS-90, deg C]" />
     </Calc>
     <Derived value="0" />
     <ShowDateTime value="0" />

@@ -32,7 +32,7 @@
     <OutputHeight value="512" />
   </BitmapSetup>
   <PlotType value="2" high="5" low="0" initialValue="2" />
-  <Title value="OP 41 - MEPHYSTO" />
+  <Title value="OP 38 - MEPHYSTO" />
   <AddFileName value="1" />
   <TitleColor value="0" />
   <FontType value="Arial" />

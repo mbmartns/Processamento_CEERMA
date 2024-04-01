@@ -230,13 +230,13 @@
 #     <!-- A/D voltage 3, Free -->
 #   </sensor>
 # </Sensors>
-# datcnv_date = Mar 19 2024 18:38:30, 7.26.7.129
+# datcnv_date = Apr 01 2024 18:07:45, 7.26.7.129
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_009.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_009.CON
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes
 # datcnv_bottle_scan_range_source = BL file
 # datcnv_scans_per_bottle = 193
-# bottlesum_date = Mar 19 2024 18:38:52, 7.26.7.129
+# bottlesum_date = Apr 01 2024 18:08:13, 7.26.7.129
 # bottlesum_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_009.ros C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_009.CON
     Bottle        Date      Sal00 Potemp090C       Scan      TimeJ   Latitude  Longitude     Dz/dtM       PrDM      DepSM      T090C      T190C   T2-T190C Potemp090C Potemp190CPotemp90Cdiff      C0S/m      C1S/m   C2-C1S/m      Sal00      Sal11 Sbeox0ML/L  Sigma-é00  Sigma-é11
   Position        Time                                                                                                                                                                                                                                                             

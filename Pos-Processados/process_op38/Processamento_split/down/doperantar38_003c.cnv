@@ -22,7 +22,7 @@
 ** PROFUNDIDADE: 2920 m
 ** DATA/HORA: 171026Z/OUT/2019
 ** OPERADOR: SO-HN CHAVES
-# nquan = 32
+# nquan = 30
 # nvalues = 1                           
 # units = specified
 # name 0 = scan: Scan Count
@@ -45,18 +45,16 @@
 # name 17 = sal00: Salinity, Practical [PSU]
 # name 18 = sal11: Salinity, Practical, 2 [PSU]
 # name 19 = sbeox0ML/L: Oxygen, SBE 43 [ml/l]
-# name 20 = sbeox1ML/L: Oxygen, SBE 43, 2 [ml/l]
-# name 21 = sbeox0ML/Ldiff: Oxygen, SBE 43, Diff, 2 - 1 [ml/l]
-# name 22 = sigma-é00: Density [sigma-theta, kg/m^3]
-# name 23 = sigma-é11: Density, 2 [sigma-theta, kg/m^3]
-# name 24 = sal00: Salinity, Practical [PSU]
-# name 25 = sigma-é00: Density [sigma-theta, kg/m^3]
-# name 26 = svCM: Sound Velocity [Chen-Millero, m/s]
-# name 27 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
-# name 28 = gsw_ptA0: potential temperature [ITS-90, deg C]
-# name 29 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
-# name 30 = gsw_saA0: Absolute Salinity [g/kg]
-# name 31 = flag:
+# name 20 = sigma-é00: Density [sigma-theta, kg/m^3]
+# name 21 = sigma-é11: Density, 2 [sigma-theta, kg/m^3]
+# name 22 = sal00: Salinity, Practical [PSU]
+# name 23 = sigma-é00: Density [sigma-theta, kg/m^3]
+# name 24 = svCM: Sound Velocity [Chen-Millero, m/s]
+# name 25 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
+# name 26 = gsw_ptA0: potential temperature [ITS-90, deg C]
+# name 27 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
+# name 28 = gsw_saA0: Absolute Salinity [g/kg]
+# name 29 = flag:
 # span 0 =       3260,       3260       
 # span 1 = 290.436063, 290.436063       
 # span 2 =  -39.54774,  -39.54774       
@@ -77,18 +75,16 @@
 # span 17 =    34.0991,    34.0991      
 # span 18 =    34.1045,    34.1045      
 # span 19 =     7.3585,     7.3585      
-# span 20 =     6.9871,     6.9871      
-# span 21 =    -0.3714,    -0.3714      
-# span 22 =    26.7557,    26.7557      
-# span 23 =    26.7598,    26.7598      
-# span 24 =    34.0988,    34.0988      
-# span 25 =    26.7555,    26.7555      
-# span 26 =    1476.25,    1476.25      
-# span 27 =    1476.26,    1476.26      
-# span 28 =     6.6555,     6.6555      
-# span 29 =  1026.7757,  1026.7757      
-# span 30 =    34.2603,    34.2603      
-# span 31 = 0.0000e+00, 0.0000e+00      
+# span 20 =    26.7557,    26.7557      
+# span 21 =    26.7598,    26.7598      
+# span 22 =    34.0988,    34.0988      
+# span 23 =    26.7555,    26.7555      
+# span 24 =    1476.25,    1476.25      
+# span 25 =    1476.26,    1476.26      
+# span 26 =     6.6555,     6.6555      
+# span 27 =  1026.7757,  1026.7757      
+# span 28 =    34.2603,    34.2603      
+# span 29 = 0.0000e+00, 0.0000e+00      
 # interval = decibars: 1                
 # start_time = Oct 17 2019 10:25:40 [NMEA time, header]
 # bad_flag = -9.990e-29
@@ -298,49 +294,49 @@
 #     <!-- A/D voltage 3, Free -->
 #   </sensor>
 # </Sensors>
-# datcnv_date = Mar 19 2024 18:35:27, 7.26.7.129 [datcnv_vars = 24]
+# datcnv_date = Apr 01 2024 18:05:11, 7.26.7.129 [datcnv_vars = 22]
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_003c.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_003c.CON
 # datcnv_skipover = 2418
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes
-# alignctd_date = Mar 19 2024 18:35:28, 7.26.7.129
+# alignctd_date = Apr 01 2024 18:05:11, 7.26.7.129
 # alignctd_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # alignctd_adv = c0S/m 0.073, c1S/m 0.073                                                                                                                                                                                            
-# wildedit_date = Mar 19 2024 18:35:28, 7.26.7.129
+# wildedit_date = Apr 01 2024 18:05:11, 7.26.7.129
 # wildedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # wildedit_pass1_nstd = 2.0
 # wildedit_pass2_nstd = 20.0
 # wildedit_pass2_mindelta = 0.000e+000
 # wildedit_npoint = 100
-# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sbeox1ML/L sbeox0ML/Ldiff sigma-é00 sigma-é11
+# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # wildedit_excl_bad_scans = yes
-# filter_date = Mar 19 2024 18:35:28, 7.26.7.129
+# filter_date = Apr 01 2024 18:05:12, 7.26.7.129
 # filter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # filter_low_pass_tc_A = 0.030
 # filter_low_pass_tc_B = 0.150
-# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sbeox1ML/L sbeox0ML/Ldiff sigma-é00 sigma-é11
+# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # filter_low_pass_B_vars =
-# celltm_date = Mar 19 2024 18:35:28, 7.26.7.129
+# celltm_date = Apr 01 2024 18:05:12, 7.26.7.129
 # celltm_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # celltm_alpha = 0.0300, 0.0300
 # celltm_tau = 7.0000, 7.0000
 # celltm_temp_sensor_use_for_cond = primary, secondary
-# loopedit_date = Mar 19 2024 18:35:28, 7.26.7.129
+# loopedit_date = Apr 01 2024 18:05:12, 7.26.7.129
 # loopedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # loopedit_minVelocity = 0.000                                                                                            
 # loopedit_surfaceSoak: do not remove                                                                                     
 # loopedit_excl_bad_scans = yes
-# wfilter_date = Mar 19 2024 18:35:29, 7.26.7.129
+# wfilter_date = Apr 01 2024 18:05:12, 7.26.7.129
 # wfilter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # wfilter_excl_bad_scans = yes
 # wfilter_action depSM = median, 24
 # wfilter_action c0S/m = median, 5
-# Derive_date = Mar 19 2024 18:35:29, 7.26.7.129 [derive_vars = 4]
+# Derive_date = Apr 01 2024 18:05:12, 7.26.7.129 [derive_vars = 4]
 # Derive_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_003c.CON
-# DeriveTEOS_10_date = Mar 19 2024 18:35:29, 7.26.7.129 [DeriveTEOS_10_vars = 3]
+# DeriveTEOS_10_date = Apr 01 2024 18:05:13, 7.26.7.129 [DeriveTEOS_10_vars = 3]
 # DeriveTEOS_10_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # Using the GSW Toolkit version 3.01
-# binavg_date = Mar 19 2024 18:35:29, 7.26.7.129
+# binavg_date = Apr 01 2024 18:05:13, 7.26.7.129
 # binavg_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # binavg_bintype = decibars
 # binavg_binsize = 1
@@ -350,11 +346,11 @@
 # binavg_min_scans_bin = 1
 # binavg_max_scans_bin = 2147483647
 # binavg_surface_bin = yes, min = 0.000, max = 2.000, value = 0.000
-# strip_date = Mar 19 2024 18:35:31, 7.26.7.129
+# strip_date = Apr 01 2024 18:05:14, 7.26.7.129
 # strip_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
-# split_date = Mar 19 2024 18:35:31, 7.26.7.129
+# split_date = Apr 01 2024 18:05:14, 7.26.7.129
 # split_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_003c.cnv
 # split_excl_bad_scans = yes
 # file_type = ascii
 *END*
-       3260 290.436063  -39.54774  -54.39120      0.475       0.00      4.000      3.954     6.6558     6.6566     0.0008     6.6554     6.6563     0.0008   3.415779   3.416226   0.000559    34.0991    34.1045     7.3585     6.9871    -0.3714    26.7557    26.7598    34.0988    26.7555    1476.25    1476.26     6.6555  1026.7757    34.2603 0.0000e+00
+       3260 290.436063  -39.54774  -54.39120      0.475       0.00      4.000      3.954     6.6558     6.6566     0.0008     6.6554     6.6563     0.0008   3.415779   3.416226   0.000559    34.0991    34.1045     7.3585    26.7557    26.7598    34.0988    26.7555    1476.25    1476.26     6.6555  1026.7757    34.2603 0.0000e+00

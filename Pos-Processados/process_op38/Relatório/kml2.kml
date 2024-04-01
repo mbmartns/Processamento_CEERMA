@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <Style id="2">
+            <IconStyle id="3">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="4">
+                    <href>http://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="6">
+            <name>002</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="5">
+                <coordinates>-52.891333333333336,-38.44983333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="8">
+            <name>003</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_003.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="7">
+                <coordinates>-54.39116666666666,-39.547666666666665,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10">
+            <name>003b</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_003b.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="9">
+                <coordinates>-54.39116666666666,-39.547666666666665,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12">
+            <name>003c</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_003c.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="11">
+                <coordinates>-54.39116666666666,-39.547666666666665,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14">
+            <name>004</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_004.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="13">
+                <coordinates>-54.99516666666667,-39.982,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16">
+            <name>004b</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_004b.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="15">
+                <coordinates>-54.995,-39.969,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18">
+            <name>005</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_005.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="17">
+                <coordinates>-51.150166666666664,-45.214333333333336,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20">
+            <name>006</name>
+            <description>&lt;div&gt;
+  &lt;img style=&quot;max-width:500px;&quot; src=&quot;file:///C:/Users/comet/Desktop/Processamento_CEERMA/Pos-Processados/process_op38/Processamento_seaplot/operantar38_006.jpg&quot;/&gt;
+&lt;/div&gt;
+</description>
+            <styleUrl>#2</styleUrl>
+            <Point id="19">
+                <coordinates>-51.480333333333334,-45.0675,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="22">
+            <name>007</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="21">
+                <coordinates>-51.770833333333336,-44.87833333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="24">
+            <name>008</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="23">
+                <coordinates>-52.156166666666664,-44.62166666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="26">
+            <name>008B</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="25">
+                <coordinates>-52.13933333333333,-44.607166666666664,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="28">
+            <name>009</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="27">
+                <coordinates>-52.704166666666666,-44.26533333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="30">
+            <name>009B</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="29">
+                <coordinates>-52.704166666666666,-44.26533333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="32">
+            <name>010</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="31">
+                <coordinates>-53.14683333333333,-43.968666666666664,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="34">
+            <name>011</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="33">
+                <coordinates>-53.375166666666665,-43.706,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="36">
+            <name>012</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="35">
+                <coordinates>-53.61216666666667,-43.44166666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="38">
+            <name>013</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="37">
+                <coordinates>-58.411833333333334,-62.14333333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="40">
+            <name>013a</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="39">
+                <coordinates>-58.41166666666667,-62.14333333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="42">
+            <name>013b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="41">
+                <coordinates>-58.41166666666667,-62.14333333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="44">
+            <name>014</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="43">
+                <coordinates>-58.0575,-62.1895,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="46">
+            <name>014b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="45">
+                <coordinates>-58.0575,-62.18966666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="48">
+            <name>015</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="47">
+                <coordinates>-58.546166666666664,-62.308,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="50">
+            <name>015b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="49">
+                <coordinates>-58.546166666666664,-62.308,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="52">
+            <name>016</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="51">
+                <coordinates>-58.211333333333336,-62.22233333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="54">
+            <name>016b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="53">
+                <coordinates>-58.211166666666664,-62.22233333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="56">
+            <name>017</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="55">
+                <coordinates>-58.43783333333333,-62.2695,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="58">
+            <name>017b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="57">
+                <coordinates>-58.43783333333333,-62.2695,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="60">
+            <name>018</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="59">
+                <coordinates>-58.3755,-62.167,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="62">
+            <name>018Bb</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="61">
+                <coordinates>-58.3755,-62.167,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="64">
+            <name>018b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="63">
+                <coordinates>-58.3755,-62.167,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="66">
+            <name>019</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="65">
+                <coordinates>-58.29983333333333,-62.208666666666666,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="68">
+            <name>020</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="67">
+                <coordinates>-58.337833333333336,-62.217,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="70">
+            <name>020b</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="69">
+                <coordinates>-58.337833333333336,-62.217,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="72">
+            <name>021</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="71">
+                <coordinates>-58.379,-62.221666666666664,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="74">
+            <name>022</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="73">
+                <coordinates>-58.3,-62.205666666666666,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="76">
+            <name>023</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="75">
+                <coordinates>-58.342666666666666,-62.213,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="78">
+            <name>024</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="77">
+                <coordinates>-58.379333333333335,-62.2195,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

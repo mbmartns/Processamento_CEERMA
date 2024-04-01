@@ -22,7 +22,7 @@
 ** PROFUNDIDADE: 420
 ** DATA/HORA: 050314Z/NOV/2019
 ** OPERADOR: SO-HN CHAVES
-# nquan = 32
+# nquan = 30
 # nvalues = 10                          
 # units = specified
 # name 0 = scan: Scan Count
@@ -45,18 +45,16 @@
 # name 17 = sal00: Salinity, Practical [PSU]
 # name 18 = sal11: Salinity, Practical, 2 [PSU]
 # name 19 = sbeox0ML/L: Oxygen, SBE 43 [ml/l]
-# name 20 = sbeox1ML/L: Oxygen, SBE 43, 2 [ml/l]
-# name 21 = sbeox0ML/Ldiff: Oxygen, SBE 43, Diff, 2 - 1 [ml/l]
-# name 22 = sigma-é00: Density [sigma-theta, kg/m^3]
-# name 23 = sigma-é11: Density, 2 [sigma-theta, kg/m^3]
-# name 24 = sal00: Salinity, Practical [PSU]
-# name 25 = sigma-é00: Density [sigma-theta, kg/m^3]
-# name 26 = svCM: Sound Velocity [Chen-Millero, m/s]
-# name 27 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
-# name 28 = gsw_ptA0: potential temperature [ITS-90, deg C]
-# name 29 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
-# name 30 = gsw_saA0: Absolute Salinity [g/kg]
-# name 31 = flag:
+# name 20 = sigma-é00: Density [sigma-theta, kg/m^3]
+# name 21 = sigma-é11: Density, 2 [sigma-theta, kg/m^3]
+# name 22 = sal00: Salinity, Practical [PSU]
+# name 23 = sigma-é00: Density [sigma-theta, kg/m^3]
+# name 24 = svCM: Sound Velocity [Chen-Millero, m/s]
+# name 25 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
+# name 26 = gsw_ptA0: potential temperature [ITS-90, deg C]
+# name 27 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
+# name 28 = gsw_saA0: Absolute Salinity [g/kg]
+# name 29 = flag:
 # span 0 =       2787,       3615       
 # span 1 = 309.136286, 309.136685       
 # span 2 =  -62.14340,  -62.14340       
@@ -77,18 +75,16 @@
 # span 17 =    34.1348,    34.1678      
 # span 18 =    34.1408,    34.1700      
 # span 19 =     7.5963,     7.6174      
-# span 20 =     7.2442,     7.3523      
-# span 21 =    -0.3583,    -0.2632      
-# span 22 =    27.4364,    27.4720      
-# span 23 =    27.4414,    27.4727      
-# span 24 =    34.1354,    34.1684      
-# span 25 =    27.4368,    27.4725      
-# span 26 =    1444.37,    1445.21      
-# span 27 =    1444.49,    1445.23      
-# span 28 =    -0.8227,    -0.6075      
-# span 29 =  1027.4463,  1027.5252      
-# span 30 =    34.3000,    34.3332      
-# span 31 = 0.0000e+00, 0.0000e+00      
+# span 20 =    27.4364,    27.4720      
+# span 21 =    27.4414,    27.4727      
+# span 22 =    34.1354,    34.1684      
+# span 23 =    27.4368,    27.4725      
+# span 24 =    1444.37,    1445.21      
+# span 25 =    1444.49,    1445.23      
+# span 26 =    -0.8227,    -0.6075      
+# span 27 =  1027.4463,  1027.5252      
+# span 28 =    34.3000,    34.3332      
+# span 29 = 0.0000e+00, 0.0000e+00      
 # interval = decibars: 1                
 # start_time = Nov 05 2019 03:14:19 [NMEA time, header]
 # bad_flag = -9.990e-29
@@ -310,49 +306,49 @@
 #     <!-- A/D voltage 5, Free -->
 #   </sensor>
 # </Sensors>
-# datcnv_date = Mar 19 2024 18:40:31, 7.26.7.129 [datcnv_vars = 24]
+# datcnv_date = Apr 01 2024 18:11:30, 7.26.7.129 [datcnv_vars = 22]
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_013a.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_013a.CON
 # datcnv_skipover = 1989
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes
-# alignctd_date = Mar 19 2024 18:40:31, 7.26.7.129
+# alignctd_date = Apr 01 2024 18:11:30, 7.26.7.129
 # alignctd_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # alignctd_adv = c0S/m 0.073, c1S/m 0.073                                                                                                                                                                                            
-# wildedit_date = Mar 19 2024 18:40:31, 7.26.7.129
+# wildedit_date = Apr 01 2024 18:11:31, 7.26.7.129
 # wildedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # wildedit_pass1_nstd = 2.0
 # wildedit_pass2_nstd = 20.0
 # wildedit_pass2_mindelta = 0.000e+000
 # wildedit_npoint = 100
-# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sbeox1ML/L sbeox0ML/Ldiff sigma-é00 sigma-é11
+# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # wildedit_excl_bad_scans = yes
-# filter_date = Mar 19 2024 18:40:32, 7.26.7.129
+# filter_date = Apr 01 2024 18:11:31, 7.26.7.129
 # filter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # filter_low_pass_tc_A = 0.030
 # filter_low_pass_tc_B = 0.150
-# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sbeox1ML/L sbeox0ML/Ldiff sigma-é00 sigma-é11
+# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # filter_low_pass_B_vars =
-# celltm_date = Mar 19 2024 18:40:32, 7.26.7.129
+# celltm_date = Apr 01 2024 18:11:31, 7.26.7.129
 # celltm_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # celltm_alpha = 0.0300, 0.0300
 # celltm_tau = 7.0000, 7.0000
 # celltm_temp_sensor_use_for_cond = primary, secondary
-# loopedit_date = Mar 19 2024 18:40:32, 7.26.7.129
+# loopedit_date = Apr 01 2024 18:11:31, 7.26.7.129
 # loopedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # loopedit_minVelocity = 0.000                                                                                            
 # loopedit_surfaceSoak: do not remove                                                                                     
 # loopedit_excl_bad_scans = yes
-# wfilter_date = Mar 19 2024 18:40:32, 7.26.7.129
+# wfilter_date = Apr 01 2024 18:11:31, 7.26.7.129
 # wfilter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # wfilter_excl_bad_scans = yes
 # wfilter_action depSM = median, 24
 # wfilter_action c0S/m = median, 5
-# Derive_date = Mar 19 2024 18:40:32, 7.26.7.129 [derive_vars = 4]
+# Derive_date = Apr 01 2024 18:11:32, 7.26.7.129 [derive_vars = 4]
 # Derive_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_013a.CON
-# DeriveTEOS_10_date = Mar 19 2024 18:40:32, 7.26.7.129 [DeriveTEOS_10_vars = 3]
+# DeriveTEOS_10_date = Apr 01 2024 18:11:32, 7.26.7.129 [DeriveTEOS_10_vars = 3]
 # DeriveTEOS_10_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # Using the GSW Toolkit version 3.01
-# binavg_date = Mar 19 2024 18:40:33, 7.26.7.129
+# binavg_date = Apr 01 2024 18:11:32, 7.26.7.129
 # binavg_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # binavg_bintype = decibars
 # binavg_binsize = 1
@@ -362,20 +358,20 @@
 # binavg_min_scans_bin = 1
 # binavg_max_scans_bin = 2147483647
 # binavg_surface_bin = yes, min = 0.000, max = 2.000, value = 0.000
-# strip_date = Mar 19 2024 18:40:34, 7.26.7.129
+# strip_date = Apr 01 2024 18:11:34, 7.26.7.129
 # strip_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
-# split_date = Mar 19 2024 18:40:34, 7.26.7.129
+# split_date = Apr 01 2024 18:11:34, 7.26.7.129
 # split_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_013a.cnv
 # split_excl_bad_scans = yes
 # file_type = ascii
 *END*
-       2787 309.136286  -62.14340  -58.41182     -0.216       0.00     10.000      9.901    -0.8224    -0.7939     0.0285    -0.8226    -0.7941     0.0285   2.772476   2.775175   0.002544    34.1678    34.1700     7.6039     7.2765    -0.3274    27.4720    27.4727    34.1684    27.4725    1444.37    1444.51    -0.8227  1027.5252    34.3332 0.0000e+00
-       2798 309.136291  -62.14340  -58.41182     -0.336       0.00      9.000      8.913    -0.7762    -0.7419     0.0343    -0.7764    -0.7421     0.0343   2.775749   2.778605   0.002862    34.1601    34.1600     7.6116     7.2849    -0.3267    27.4639    27.4625    34.1610    27.4647    1444.56    1444.72    -0.7764  1027.5125    34.3258 0.0000e+00
-       2874 309.136328  -62.14340  -58.41182     -0.305       0.00      8.000      7.926    -0.8026    -0.7764     0.0262    -0.8028    -0.7766     0.0262   2.773746   2.776187   0.002408    34.1643    34.1673     7.6048     7.2679    -0.3369    27.4684    27.4697    34.1645    27.4685    1444.42    1444.55    -0.8028  1027.5117    34.3293 0.0000e+00
-       2982 309.136380  -62.14340  -58.41182     -0.205       0.00      7.000      6.932    -0.8001    -0.7864     0.0137    -0.8003    -0.7866     0.0137   2.774015   2.775345   0.001415    34.1652    34.1689     7.6042     7.2724    -0.3318    27.4690    27.4714    34.1659    27.4696    1444.42    1444.49    -0.8003  1027.5079    34.3307 0.0000e+00
-       3088 309.136431  -62.14340  -58.41182     -0.244       0.00      6.000      5.943    -0.7356    -0.7345     0.0012    -0.7358    -0.7346     0.0012   2.778993   2.779574   0.000561    34.1584    34.1646     7.6033     7.2450    -0.3583    27.4609    27.4659    34.1610    27.4630    1444.70    1444.71    -0.7358  1027.4964    34.3258 0.0000e+00
-       3177 309.136473  -62.14340  -58.41182     -0.289       0.00      5.000      4.952    -0.6698    -0.6663     0.0035    -0.6699    -0.6664     0.0035   2.784328   2.784948   0.000649    34.1543    34.1591     7.5963     7.2442    -0.3521    27.4549    27.4586    34.1593    27.4588    1444.99    1445.01    -0.6699  1027.4875    34.3240 0.0000e+00
-       3251 309.136509  -62.14340  -58.41182     -0.308       0.00      4.000      3.963    -0.6382    -0.6388    -0.0006    -0.6383    -0.6389    -0.0006   2.786295   2.786855   0.000545    34.1484    34.1565     7.6142     7.2569    -0.3573    27.4487    27.4553    34.1507    27.4506    1445.11    1445.12    -0.6383  1027.4744    34.3155 0.0000e+00
-       3331 309.136548  -62.14340  -58.41182     -0.317       0.00      3.000      2.971    -0.6192    -0.6158     0.0034    -0.6193    -0.6159     0.0034   2.787853   2.788633   0.000792    34.1475    34.1544     7.6014     7.2939    -0.3075    27.4472    27.4526    34.1510    27.4500    1445.18    1445.21    -0.6193  1027.4690    34.3157 0.0000e+00
-       3415 309.136588  -62.14340  -58.41182     -0.280       0.00      2.000      1.978    -0.6079    -0.6061     0.0018    -0.6080    -0.6062     0.0018   2.788164   2.788850   0.000718    34.1416    34.1492     7.6112     7.3480    -0.2632    27.4419    27.4479    34.1430    27.4431    1445.21    1445.23    -0.6080  1027.4573    34.3077 0.0000e+00
-       3615 309.136685  -62.14340  -58.41182     -0.245       0.00      1.000      0.995    -0.6075    -0.6115    -0.0039    -0.6076    -0.6115    -0.0039   2.787585   2.787685   0.000115    34.1348    34.1408     7.6174     7.3523    -0.2651    27.4364    27.4414    34.1354    27.4368    1445.18    1445.17    -0.6075  1027.4463    34.3000 0.0000e+00
+       2787 309.136286  -62.14340  -58.41182     -0.216       0.00     10.000      9.901    -0.8224    -0.7939     0.0285    -0.8226    -0.7941     0.0285   2.772476   2.775175   0.002544    34.1678    34.1700     7.6039    27.4720    27.4727    34.1684    27.4725    1444.37    1444.51    -0.8227  1027.5252    34.3332 0.0000e+00
+       2798 309.136291  -62.14340  -58.41182     -0.336       0.00      9.000      8.913    -0.7762    -0.7419     0.0343    -0.7764    -0.7421     0.0343   2.775749   2.778605   0.002862    34.1601    34.1600     7.6116    27.4639    27.4625    34.1610    27.4647    1444.56    1444.72    -0.7764  1027.5125    34.3258 0.0000e+00
+       2874 309.136328  -62.14340  -58.41182     -0.305       0.00      8.000      7.926    -0.8026    -0.7764     0.0262    -0.8028    -0.7766     0.0262   2.773746   2.776187   0.002408    34.1643    34.1673     7.6048    27.4684    27.4697    34.1645    27.4685    1444.42    1444.55    -0.8028  1027.5117    34.3293 0.0000e+00
+       2982 309.136380  -62.14340  -58.41182     -0.205       0.00      7.000      6.932    -0.8001    -0.7864     0.0137    -0.8003    -0.7866     0.0137   2.774015   2.775345   0.001415    34.1652    34.1689     7.6042    27.4690    27.4714    34.1659    27.4696    1444.42    1444.49    -0.8003  1027.5079    34.3307 0.0000e+00
+       3088 309.136431  -62.14340  -58.41182     -0.244       0.00      6.000      5.943    -0.7356    -0.7345     0.0012    -0.7358    -0.7346     0.0012   2.778993   2.779574   0.000561    34.1584    34.1646     7.6033    27.4609    27.4659    34.1610    27.4630    1444.70    1444.71    -0.7358  1027.4964    34.3258 0.0000e+00
+       3177 309.136473  -62.14340  -58.41182     -0.289       0.00      5.000      4.952    -0.6698    -0.6663     0.0035    -0.6699    -0.6664     0.0035   2.784328   2.784948   0.000649    34.1543    34.1591     7.5963    27.4549    27.4586    34.1593    27.4588    1444.99    1445.01    -0.6699  1027.4875    34.3240 0.0000e+00
+       3251 309.136509  -62.14340  -58.41182     -0.308       0.00      4.000      3.963    -0.6382    -0.6388    -0.0006    -0.6383    -0.6389    -0.0006   2.786295   2.786855   0.000545    34.1484    34.1565     7.6142    27.4487    27.4553    34.1507    27.4506    1445.11    1445.12    -0.6383  1027.4744    34.3155 0.0000e+00
+       3331 309.136548  -62.14340  -58.41182     -0.317       0.00      3.000      2.971    -0.6192    -0.6158     0.0034    -0.6193    -0.6159     0.0034   2.787853   2.788633   0.000792    34.1475    34.1544     7.6014    27.4472    27.4526    34.1510    27.4500    1445.18    1445.21    -0.6193  1027.4690    34.3157 0.0000e+00
+       3415 309.136588  -62.14340  -58.41182     -0.280       0.00      2.000      1.978    -0.6079    -0.6061     0.0018    -0.6080    -0.6062     0.0018   2.788164   2.788850   0.000718    34.1416    34.1492     7.6112    27.4419    27.4479    34.1430    27.4431    1445.21    1445.23    -0.6080  1027.4573    34.3077 0.0000e+00
+       3615 309.136685  -62.14340  -58.41182     -0.245       0.00      1.000      0.995    -0.6075    -0.6115    -0.0039    -0.6076    -0.6115    -0.0039   2.787585   2.787685   0.000115    34.1348    34.1408     7.6174    27.4364    27.4414    34.1354    27.4368    1445.18    1445.17    -0.6075  1027.4463    34.3000 0.0000e+00

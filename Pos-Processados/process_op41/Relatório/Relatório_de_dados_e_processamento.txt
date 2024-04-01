@@ -56,3 +56,29 @@ Estação 019
 Estação 020
 Estação 021
 Estação 022
+
+Foram processadas as seguintes estações:
+Estação 001
+Estação 001MEPHY
+Estação 002
+Estação 003
+Estação 005
+Estação 005MEPHY
+Estação 006
+Estação 007
+Estação 008
+Estação 009
+Estação 010
+Estação 011
+Estação 012
+Estação 013
+Estação 013LR
+Estação 014LR
+Estação 015
+Estação 016
+Estação 017
+Estação 018
+Estação 019
+Estação 020
+Estação 021
+Estação 022

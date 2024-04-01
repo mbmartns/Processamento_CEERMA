@@ -284,15 +284,15 @@
 #     </FluoroSeapointSensor>
 #   </sensor>
 # </Sensors>
-# datcnv_date = Mar 19 2024 19:43:50, 7.26.7.129 [datcnv_vars = 22]
+# datcnv_date = Apr 01 2024 18:25:35, 7.26.7.129 [datcnv_vars = 22]
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\Copia_Dados\operantar41_009.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\Copia_Dados\operantar41_009.XMLCON
 # datcnv_skipover = 665
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes
-# alignctd_date = Mar 19 2024 19:43:52, 7.26.7.129
+# alignctd_date = Apr 01 2024 18:25:37, 7.26.7.129
 # alignctd_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # alignctd_adv = c0S/m 0.073, c1S/m 0.073                                                                                                                                                                                            
-# wildedit_date = Mar 19 2024 19:43:54, 7.26.7.129
+# wildedit_date = Apr 01 2024 18:25:39, 7.26.7.129
 # wildedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # wildedit_pass1_nstd = 2.0
 # wildedit_pass2_nstd = 20.0
@@ -300,33 +300,33 @@
 # wildedit_npoint = 100
 # wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # wildedit_excl_bad_scans = yes
-# filter_date = Mar 19 2024 19:43:56, 7.26.7.129
+# filter_date = Apr 01 2024 18:25:40, 7.26.7.129
 # filter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # filter_low_pass_tc_A = 0.030
 # filter_low_pass_tc_B = 0.150
 # filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
 # filter_low_pass_B_vars =
-# celltm_date = Mar 19 2024 19:43:59, 7.26.7.129
+# celltm_date = Apr 01 2024 18:25:43, 7.26.7.129
 # celltm_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # celltm_alpha = 0.0300, 0.0300
 # celltm_tau = 7.0000, 7.0000
 # celltm_temp_sensor_use_for_cond = primary, secondary
-# loopedit_date = Mar 19 2024 19:44:01, 7.26.7.129
+# loopedit_date = Apr 01 2024 18:25:45, 7.26.7.129
 # loopedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # loopedit_minVelocity = 0.000                                                                                            
 # loopedit_surfaceSoak: do not remove                                                                                     
 # loopedit_excl_bad_scans = yes
-# wfilter_date = Mar 19 2024 19:44:03, 7.26.7.129
+# wfilter_date = Apr 01 2024 18:25:47, 7.26.7.129
 # wfilter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # wfilter_excl_bad_scans = yes
 # wfilter_action depSM = median, 24
 # wfilter_action c0S/m = median, 5
-# Derive_date = Mar 19 2024 19:44:05, 7.26.7.129 [derive_vars = 4]
+# Derive_date = Apr 01 2024 18:25:49, 7.26.7.129 [derive_vars = 4]
 # Derive_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\Copia_Dados\operantar41_009.XMLCON
-# DeriveTEOS_10_date = Mar 19 2024 19:44:07, 7.26.7.129 [DeriveTEOS_10_vars = 3]
+# DeriveTEOS_10_date = Apr 01 2024 18:25:50, 7.26.7.129 [DeriveTEOS_10_vars = 3]
 # DeriveTEOS_10_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # Using the GSW Toolkit version 3.01
-# binavg_date = Mar 19 2024 19:44:09, 7.26.7.129
+# binavg_date = Apr 01 2024 18:25:52, 7.26.7.129
 # binavg_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # binavg_bintype = decibars
 # binavg_binsize = 1
@@ -336,9 +336,9 @@
 # binavg_min_scans_bin = 1
 # binavg_max_scans_bin = 2147483647
 # binavg_surface_bin = yes, min = 0.000, max = 2.000, value = 0.000
-# strip_date = Mar 19 2024 19:44:12, 7.26.7.129
+# strip_date = Apr 01 2024 18:25:55, 7.26.7.129
 # strip_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
-# split_date = Mar 19 2024 19:44:12, 7.26.7.129
+# split_date = Apr 01 2024 18:25:56, 7.26.7.129
 # split_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\operantar41_009.cnv
 # split_excl_bad_scans = yes
 # file_type = ascii

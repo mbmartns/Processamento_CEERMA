@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <Style id="2">
+            <IconStyle id="3">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="4">
+                    <href>http://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Placemark id="6">
+            <name>001</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="5">
+                <coordinates>-48.626333333333335,-36.66883333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="8">
+            <name>001MEPHY</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="7">
+                <coordinates>-48.626333333333335,-36.66883333333333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="10">
+            <name>002</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="9">
+                <coordinates>-48.62466666666667,-37.278666666666666,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="12">
+            <name>003</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="11">
+                <coordinates>-48.62416666666667,-37.744166666666665,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="14">
+            <name>005</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="13">
+                <coordinates>-48.99433333333333,-38.656333333333336,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="16">
+            <name>005MEPHY</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="15">
+                <coordinates>-48.986666666666665,-38.657,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="18">
+            <name>006</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="17">
+                <coordinates>-53.45366666666666,-42.209,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="20">
+            <name>007</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="19">
+                <coordinates>-52.947833333333335,-42.1805,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="22">
+            <name>008</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="21">
+                <coordinates>-52.618,-42.505,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="24">
+            <name>009</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="23">
+                <coordinates>-52.257333333333335,-42.830666666666666,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="26">
+            <name>010</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="25">
+                <coordinates>-52.026833333333336,-43.353,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="28">
+            <name>011</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="27">
+                <coordinates>-51.925,-43.683,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="30">
+            <name>012</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="29">
+                <coordinates>-51.860166666666665,-44.028333333333336,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="32">
+            <name>013</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="31">
+                <coordinates>-51.843333333333334,-44.389,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="34">
+            <name>013LR</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="33">
+                <coordinates>-51.782,-44.40116666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="36">
+            <name>014LR</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="35">
+                <coordinates>-58.48866666666667,-45.8835,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="38">
+            <name>015</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="37">
+                <coordinates>-58.4085,-62.147,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="40">
+            <name>016</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="39">
+                <coordinates>-58.37316666666667,-62.163666666666664,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="42">
+            <name>017</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="41">
+                <coordinates>-58.2015,-62.222166666666666,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="44">
+            <name>018</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="43">
+                <coordinates>-58.05433333333333,-62.185833333333335,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="46">
+            <name>019</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="45">
+                <coordinates>-60.141333333333336,-62.92466666666667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="48">
+            <name>020</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="47">
+                <coordinates>-58.897166666666664,-62.7,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="50">
+            <name>021</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="49">
+                <coordinates>-57.94433333333333,-62.3605,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="52">
+            <name>022</name>
+            <styleUrl>#2</styleUrl>
+            <Point id="51">
+                <coordinates>-62.056333333333335,-59.756166666666665,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

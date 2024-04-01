@@ -241,7 +241,7 @@
 #     <!-- A/D voltage 3, Free -->
 #   </sensor>
 # </Sensors>
-# datcnv_date = Mar 19 2024 19:40:51, 7.26.7.129
+# datcnv_date = Apr 01 2024 18:22:42, 7.26.7.129
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\Copia_Dados\operantar41_003.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op41\Copia_Dados\operantar41_003.XMLCON
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes

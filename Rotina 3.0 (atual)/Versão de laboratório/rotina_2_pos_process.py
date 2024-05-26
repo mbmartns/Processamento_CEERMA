@@ -225,22 +225,17 @@ def conferir_dados(diretorio_destino):
                                         print('oi')
                                     else:
                                         resultado_7 += '1'
-                                     #   print('deu bom')
 
                                     if spike_test_sal > 0.9:
                                         resultado_8 += '4'
-                                        print('deu ruim sal')
                                     else:
                                         resultado_8 += '1'
-                                     #   print('deu bom sal')
 
                                 else:
                                     if spike_test > 2:
                                         resultado_7 += '4'
-                                        print('deu ruim')
                                     else:
                                         resultado_7 += '1'
-                                     #   print('deu bom')
 
 
                                     if spike_test_sal > 0.3:
@@ -249,16 +244,9 @@ def conferir_dados(diretorio_destino):
 
                                     else:
                                         resultado_8 += '1'
-                                     #   print('deu bom sal')
 
 
                                 
-
-                        #print(spike_v2)
-                        #print(spike_v3)
-
-
-
                         if (valor_pres < -5):
                             resultado_6 += '4'
                         elif -5 < valor_pres < -2.4:

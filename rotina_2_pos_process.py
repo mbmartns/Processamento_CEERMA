@@ -1,17 +1,4 @@
-# import cartopy.crs as ccrs
-
-# # Definir as coordenadas a serem verificadas
-# coordenadas = (latitude_desejada, longitude_desejada)  # Substitua latitude_desejada e longitude_desejada pelas coordenadas desejadas
-
-# # Verificar a classificação da terra nas coordenadas fornecidas
-# land_classifier = ccrs.NaturalEarthFeature('physical', 'land', '10m')
-# in_land = land_classifier.contains_point(coordenadas)
-
-# # Verificar se as coordenadas estão em terra ou no oceano
-# if in_land:
-#     print("As coordenadas estão em terra.")
-# else:
-#     print("As coordenadas estão no oceano.")
+from global_land_mask import globe
 import os
 import shutil
 
@@ -63,7 +50,13 @@ def ler_linha_de_cada_arquivo(diretorio_origem, diretorio_destino):
                         continue
                 # Escreve as linhas restantes no arquivo original
             with open(caminho_arquivo, 'w') as arquivo_origem:
-                arquivo_origem.write('Test 1 => T2-T190C: Temperature Difference, 2 - 1 [ITS-90, deg C] < 0.005\nTest 2 => C2-C1S/m: Conductivity Difference, 2 - 1 [S/m] < 0.005\n\n\n')
+                arquivo_origem.write('Test 1 => T2-T190C: Temperature Difference, 2 - 1 [ITS-90, deg C] < 0.005\nTest 2 => C2-C1S/m: Conductivity Difference, 2 - 1 [S/m] < 0.005' + 
+                                     '\nTest 3 => Impossible Locations Test (-90 <= lat <= 90) & (-180 <= long <= 180)' +
+                                     '\nTest 4 => Position on land Test' +
+                                     '\nTest 5 => Stuck Value Test' +
+                                     '\nTest 6 => Global Range Test\n' +
+                                     "\nFlags: '1' - Good Data     '2' - Probably Good Data    '3' - Probably Bad Data     '4' - Bad Data\n\n\n")
+               #precisa ser injetada pra baixo!!!!
                 for linha in linhas_restantes:
                     arquivo_origem.write(linha)
 
@@ -83,34 +76,11 @@ def conferir_dados(diretorio_destino):
         
         if arquivo.endswith('.cnv'):  # Verifica se é um arquivo de texto
 
-            # Abre o arquivo e lê linha por linha
-            # with open(caminho_arquivo, 'r+') as cnv_tratado:
-
-            #     for linha in cnv_tratado:
-            #         # Divide a linha em colunas usando espaços como delimitador
-            #         colunas = linha.split()
-
-            #         # Verifica se existem pelo menos 10 colunas e se a décima coluna é um número
-            #         if len(colunas) >= 10 and colunas[10].replace('.', '').isdigit():
-            #             valor_temp = float(colunas[10])
-            #             valor_cond = float(colunas[16])
-            #             #print(valor_cond)
-            #             # Verifica se o valor é maior que 0.005
-            #             if valor_temp > 0.005:
-            #                 #print(valor)
-            #                 valores_temp_maior.append(valor_temp)
-            #                 cnv_tratado.write('\tF')
-            #             else:
-            #                 cnv_tratado.write('\tT')
-
-            #             if valor_cond > 0.005:
-            #                 #print(valor_cond)
-            #                 valores_cond_maior.append(valor_cond)
-            #                 cnv_tratado.write('F')
-            #             else:
             #                 cnv_tratado.write('T')
 
             with open(caminho_arquivo, 'r+') as cnv_tratado:
+                #DIZER QUANTAS LINHAS PULAR POR CONTA DOS TESTES
+
                 # Lê cada linha do arquivo e armazena em uma lista
                 linhas = cnv_tratado.readlines()
 
@@ -119,11 +89,23 @@ def conferir_dados(diretorio_destino):
 
                 # Percorre cada linha armazenada
                 for linha in linhas:
+
+                            # Verifica se a linha começa com "Test"
+                    if linha.startswith("Test") or linha.startswith("Flags"):
+                    # Se começar com "Test", pule esta linha
+                        cnv_tratado.write(linha)
+
+                        continue
+
                     # Divide a linha em colunas usando espaços como delimitador
                     colunas = linha.split()
                     resultado_impossible = '\t'
                     resultado_1 = '\t'
                     resultado_2 = '\t'
+                    resultado_4 = '\t'
+                    resultado_5 = '\t'
+                    resultado_6 = '\t'
+
 
                     
                     if len(colunas) >= 16: #and colunas[10].replace('.', '').isdigit():
@@ -131,17 +113,42 @@ def conferir_dados(diretorio_destino):
                         valor_cond = float(colunas[16])
                         valor_temp = abs(valor_temp)
                         valor_cond = abs(valor_cond)
+                        valor_sal = float(colunas[17])
+                        valor_pres = float(colunas[6])
 
 
                         valor_lat = float(colunas[2])
                         valor_long = float(colunas[3])
-                        valor_lat = abs(valor_lat)
-                        valor_long = abs(valor_long)
+                        valor_lat = valor_lat
+                        valor_long = valor_long
 
 
                         resultado_1 = '\t'
                         resultado_2 = '\t'
                         resultado_impossible = '\t'
+                        resultado_4 = '\t'
+                        resultado_5 = '\t'
+                        resultado_6 = '\t'
+
+                        if (valor_pres < -5):
+                            resultado_6 += '4'
+                        elif -5 < valor_pres < -2.4:
+                            resultado_6 += '3'
+                        elif (2 < valor_sal < 41.0) and (-2.5 <= valor_temp <= 40):
+                            resultado_6 += '1'
+                        
+
+                        if valor_temp == valor_sal:
+                            resultado_5 += '4'
+                        else:
+                            resultado_5 += '1'
+                        
+                        if globe.is_land(valor_lat, valor_long):
+                            resultado_4 += '4'
+                        else:
+                            resultado_4 += '1'
+
+
 
                         if -90 <= valor_lat <= 90 and -180 <= valor_long <= 180:
 
@@ -166,7 +173,7 @@ def conferir_dados(diretorio_destino):
                         else:
                             resultado_2 += '1'
 
-                        linha = linha.rstrip('\n') + resultado_1 + resultado_2 + resultado_impossible + '\n'
+                        linha = linha.rstrip('\n') + resultado_1 + resultado_2 + resultado_impossible + resultado_4 + resultado_5 + resultado_6 + '\n'
 
                     # Escreve a linha modificada de volta no arquivo
                     cnv_tratado.write(linha)

@@ -1,0 +1,210 @@
+Variáveis no arquivo:
+{'PROFILE': <class 'netCDF4._netCDF4.Variable'>
+int32 PROFILE(time)
+    _FillValue: 99999
+    long_name: profile number
+    units: 1
+    format: %05d
+    comment: Station number
+    default_value:  a station could be have more than one cast
+unlimited dimensions:
+current shape = (8,)
+filling on, 'TIME': <class 'netCDF4._netCDF4.Variable'>
+float64 TIME(time)
+    long_name: time of measurement
+    standard_name: time
+    units: days since 1950-01-01T00:00:00Z
+    conventions: Relative julian days with decimal part (as parts of the day)
+    valid_min: 0.0
+    valid_max: 90000.0
+    format: %6.6f
+    axis: T
+unlimited dimensions:
+current shape = (8,)
+filling on, default _FillValue of 9.969209968386869e+36 used, 'LATITUDE': <class 'netCDF4._netCDF4.Variable'>
+float32 LATITUDE(time)
+    long_name: latitude of measurement
+    standard_name: latitude
+    units: degrees_north
+    format: %8.5f
+    axis: Y
+    reference: WGS84
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+unlimited dimensions:
+current shape = (8,)
+filling on, default _FillValue of 9.969209968386869e+36 used, 'LONGITUDE': <class 'netCDF4._netCDF4.Variable'>
+float32 LONGITUDE(time)
+    long_name: longitude of measurement
+    standard_name: longitude
+    units: degrees_east
+    format: %9.5f
+    axis: X
+    reference: WGS84
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4327
+unlimited dimensions:
+current shape = (8,)
+filling on, default _FillValue of 9.969209968386869e+36 used, 'BATH': <class 'netCDF4._netCDF4.Variable'>
+float32 BATH(time)
+    _FillValue: -1.0
+    long_name: bathymetric depth
+    units: meter
+    valid_min: 0.0
+    valid_max: 11000.0
+    format: %6.1f
+    resolution: 0.1
+unlimited dimensions:
+current shape = (8,)
+filling on, 'PRES': <class 'netCDF4._netCDF4.Variable'>
+float32 PRES(time, level)
+    _FillValue: 1e+36
+    long_name: sea water pressure
+    standard_name: sea_water_pressure
+    units: decibar
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 0.0
+    valid_max: 9000.0
+    format: %7.2f
+    comment: Pressure (dbar) of the measurement
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'DEPTH': <class 'netCDF4._netCDF4.Variable'>
+float32 DEPTH(time, level)
+    _FillValue: 1e+36
+    long_name: depth of measurement
+    standard_name: depth
+    units: meter
+    positive: down
+    valid_min: 0.0
+    valid_max: 9000.0
+    format: %7.2f
+    axis: Z
+    coordinate_reference_frame: urn:ogc:crs:EPSG::5831
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'ETDD': <class 'netCDF4._netCDF4.Variable'>
+float64 ETDD(time, level)
+    _FillValue: 1e+36
+    long_name: ellapsed time
+    units: 1
+    valid_min: 0.0
+    valid_max: 90000.0
+    format: %9.5f
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'TEMP': <class 'netCDF4._netCDF4.Variable'>
+float32 TEMP(time, level)
+    _FillValue: 1e+36
+    long_name: sea water temperature
+    standard_name: sea_water_temperature
+    units: degree_Celsius
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: -1.5
+    valid_max: 38.0
+    format: %7.4f
+    resolution: 0.001
+    comment: Ocean temperature in Degrees Celsius
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'PSAL': <class 'netCDF4._netCDF4.Variable'>
+float32 PSAL(time, level)
+    _FillValue: 1e+36
+    long_name: practical salinity
+    standard_name: sea_water_salinity
+    units: PSS-78
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: -1.5
+    valid_max: 38.0
+    format: %7.4f
+    resolution: 0.001
+    comment: Ocean practical salinity (PSS-78)
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'DOX2': <class 'netCDF4._netCDF4.Variable'>
+float32 DOX2(time, level)
+    _FillValue: 1e+36
+    long_name: dissolved oxygen
+    standard_name: moles_of_oxygen_per_unit_mass_in_sea_water
+    units: micromole/kg
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 0.0
+    valid_max: 450.0
+    format: %7.3f
+    resolution: 0.001
+    comment: Ocean oxygen in micromole by kg
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'DENS': <class 'netCDF4._netCDF4.Variable'>
+float32 DENS(time, level)
+    _FillValue: 1e+36
+    long_name: density
+    standard_name: sea_water_density
+    units: kg/m3
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: -1.5
+    valid_max: 38.0
+    format: %6.3f
+    resolution: 0.001
+    comment: Ocean density
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'SVEL': <class 'netCDF4._netCDF4.Variable'>
+float32 SVEL(time, level)
+    _FillValue: 1e+36
+    long_name: sound velocity
+    standard_name: speed_of_sound_in_sea_water
+    units: meter/second
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 1350.0
+    valid_max: 1600.0
+    format: %7.2f
+    resolution: 0.001
+    comment: Ocean sound velocity
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'FLU2': <class 'netCDF4._netCDF4.Variable'>
+float32 FLU2(time, level)
+    _FillValue: 1e+36
+    long_name: fluorescence
+    units: milligram/m3
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 0.0
+    valid_max: 1.0
+    format: %8.4f
+    resolution: 0.001
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'FLU3': <class 'netCDF4._netCDF4.Variable'>
+float32 FLU3(time, level)
+    _FillValue: 1e+36
+    long_name: secondary fluorescence
+    units: milligram/m3
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 0.0
+    valid_max: 1.0
+    format: %8.4f
+    resolution: 0.001
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'TUR3': <class 'netCDF4._netCDF4.Variable'>
+float32 TUR3(time, level)
+    _FillValue: 1e+36
+    long_name: light transmission
+    units: %
+    coordinates: TIME DEPTH LATITUDE LONGITUDE
+    valid_min: 0.0
+    valid_max: 100.0
+    format: %6.2f
+    resolution: 0.001
+unlimited dimensions:
+current shape = (8, 4059)
+filling on, 'NAVG': <class 'netCDF4._netCDF4.Variable'>
+int32 NAVG(time, level)
+    _FillValue: 9999
+    long_name: averaged data cycle number
+    units: 1
+    valid_min: 0
+    valid_max: 999
+    format: %3d
+unlimited dimensions:
+current shape = (8, 4059)
+filling on}

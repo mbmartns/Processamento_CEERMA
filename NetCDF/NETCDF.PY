@@ -94,14 +94,19 @@ with nc.Dataset(arquivo_netcdf, 'r') as arquivo:
 
     # Exibir informações sobre a variável PROFILE
     print("\nInformações sobre a variável TEMP:")
-    print(temperatura)
+    #print(temperatura)
 
         # Se você precisar acessar os dados da variável PROFILE
     dados_profile = profile[:]
     dados_profundidade = profundidade[:]
     dados_temperatura = temperatura[:]
+    print("\nDados da variável PROFILE:")
+    print(dados_profile)
+    print("\nDados da variável DEPTH:")
+    print(dados_profundidade)
     print("\nDados da variável TEMP:")
     print(dados_temperatura)
+
 
 
     # Fechar o arquivo
@@ -114,4 +119,4 @@ with nc.Dataset(arquivo_netcdf, 'r') as arquivo:
 # Plotar gráfico de profundidade vs oxigênio
 #plot(arquivo_netcdf)
 
-plot_de_perfil(arquivo_netcdf)
+#plot_de_perfil(arquivo_netcdf)

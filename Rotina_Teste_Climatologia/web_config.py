@@ -76,6 +76,57 @@ def obter_arquivos(meses, url):
     driver.get(url)
     time.sleep(2)
 
+    # Função para clicar nos links dos meses fornecidos
+    def clicar_links_meses(meses):
+        mes_map = {
+            'Jan': 'January',
+            'Feb': 'February',
+            'Mar': 'March',
+            'Apr': 'April',
+            'May': 'May',
+            'Jun': 'June',
+            'Jul': 'July',
+            'Aug': 'August',
+            'Sep': 'September',
+            'Oct': 'October',
+            'Nov': 'November',
+            'Dec': 'December'
+        }
+        
+        for mes_abreviado in meses:
+
+            mes_completo = mes_map[mes_abreviado]
+            link_mes = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, f'//a[contains(text(), "Monthly - {mes_completo}")]'))
+            )
+            link_mes.click()
+            #time.sleep(2)  # Esperar um pouco antes de clicar no próximo link
+                # Esperar o tempo necessário para o download completar
+            time.sleep(15)
+
+            # Verificar se o arquivo foi baixado
+
+            files = os.listdir(download_dir)
+            print("Arquivos baixado:", files)
+            if files:
+                caminho_arquivo = os.path.join(download_dir, files[0])  # Pegue o primeiro arquivo na lista
+
+                #caminho_arquivo = os.path.join(download_dir, file)
+                diretorio_destino = './extraido/'
+                os.makedirs(diretorio_destino, exist_ok=True)
+
+                    # Chama a função para extrair o arquivo .gz
+                caminho_arquivo_descompactado = extrair_arquivo_gz(caminho_arquivo, diretorio_destino, mes_abreviado)
+                # Deleta o arquivo baixado após extração
+                os.remove(caminho_arquivo)
+
+                if caminho_arquivo_descompactado:
+                    print(f'O arquivo extraído está em: {caminho_arquivo_descompactado}')
+                else:
+                    print('Falha ao extrair o arquivo.')
+
+
+
     # Encontrar e clicar no botão de opção "1/4°"
     opcao_1_4 = driver.find_element(By.XPATH, '//input[@value="0.25"]')
     opcao_1_4.click()
@@ -109,42 +160,26 @@ def obter_arquivos(meses, url):
     update_button.click()
 
     time.sleep(6)
+    clicar_links_meses(meses)
+
     # Encontrar e clicar no link "Annual"
-    link_anual = driver.find_element(By.XPATH, '//a[contains(text(), "Annual")]')
-    link_anual.click()
+    #link_anual = driver.find_element(By.XPATH, '//a[contains(text(), "Annual")]')
+    #link_anual.click()
 
      # Esperar pelo link "Annual" ser clicável
-    link_anual = WebDriverWait(driver, 20).until(
-         EC.element_to_be_clickable((By.XPATH, '//a[contains(text(), "Annual")]'))
-     )
-    link_anual.click()
+    #link_anual = WebDriverWait(driver, 20).until(
+    #     EC.element_to_be_clickable((By.XPATH, '//a[contains(text(), "Annual")]'))
+    # )
+    #link_anual.click()
 
-    # Esperar o tempo necessário para o download completar
-    time.sleep(15)
 
     print('all done')
 
     # Adicionar mais ações conforme necessário...
     driver.quit()
 
-    # Verificar se o arquivo foi baixado
-    files = os.listdir(download_dir)
-    print("Arquivos baixados:", files)
 
-    for file in files:
-        caminho_arquivo = os.path.join(download_dir, file)
-        diretorio_destino = './extraido/'
-        os.makedirs(diretorio_destino, exist_ok=True)
-
-        # Chama a função para extrair o arquivo .gz
-        caminho_arquivo_descompactado = extrair_arquivo_gz(caminho_arquivo, diretorio_destino)
-
-        # Exemplo de uso do arquivo extraído
-        if caminho_arquivo_descompactado:
-            print(f'O arquivo extraído está em: {caminho_arquivo_descompactado}')
-        else:
-            print('Falha ao extrair o arquivo.')
 
 if __name__ == "__main__":
     meses = ['Oct', 'Jan', 'Nov']
-#obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
+obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')

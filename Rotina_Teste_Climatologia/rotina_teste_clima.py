@@ -107,7 +107,7 @@ def tabela_location(diretorio_origem, diretorio_teste):
         for arquivo in os.listdir(diretorio_origem):
             caminho_arquivo = os.path.join(diretorio_origem, arquivo)
             profundidade, local, mes = capturar_valores_colunas(caminho_arquivo)
-            valores = f'{arquivo}\t{local}\t{profundidade}\t{mes}'
+            valores = f'{arquivo}\t{local}\t{profundidade}\t\t{mes}'
 
             valores_tabela.append(valores)
 
@@ -124,6 +124,7 @@ def ler_csv(arquivo_csv):
 meses = meses(diretorio_destino)
 print("Meses únicos:", meses)
 tabela_location(diretorio_origem, diretorio_teste)
+obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
 
 #span_depSM, coordenadas = capturar_valores_colunas(diretorio_origem)
 

@@ -1,7 +1,7 @@
 import os
 import re
 
-from web_config import obter_arquivos
+from web_config import *
 
 pasta_pos_proc = input('Digite o caminho da pasta de pós-processamento: ')
 diretorio_origem = os.path.join(pasta_pos_proc, 'Dados')
@@ -40,10 +40,17 @@ def capturar_valores_colunas(caminho_arquivo):
         with open(caminho_arquivo, 'r') as file:
             linhas = file.readlines()
 
+        padrao_mes = re.compile(r'\* NMEA UTC \(Time\) = ([A-Z][a-z]{2}) \d{2} \d{4} \d{2}:\d{2}:\d{2}')
         nomes_colunas = {}
         spans_colunas = {}
+        mes = ''
 
         for linha in linhas:
+            resultado = padrao_mes.search(linha)
+            if resultado:
+                # Adicionar o mês encontrado à lista
+                mes = resultado.group(1)
+
             # Verificar linhas que contêm "name"
             if linha.startswith("# name"):
                 partes = linha.split(" = ")
@@ -82,7 +89,7 @@ def capturar_valores_colunas(caminho_arquivo):
         else:
             span_depSM_str = None
 
-        return span_depSM_str, coordenadas
+        return span_depSM_str, coordenadas, mes
 
 
         return span_depSM, coordenadas
@@ -92,16 +99,18 @@ def tabela_location(diretorio_origem, diretorio_teste):
 
     tabela_local = os.path.join(diretorio_teste, 'Tabela_Local.txt')
     linhas_tabela = []
+
     with open(tabela_local, 'w') as tabela:
-        tabela.write('Arquivo\t\t\tLocalização\t\t\tProfundidade\n')
+        tabela.write('Arquivo\t\t\tLocalização\t\tProfundidade\t\tMês\n')
         valores_tabela = []
 
         for arquivo in os.listdir(diretorio_origem):
             caminho_arquivo = os.path.join(diretorio_origem, arquivo)
-            profundidade, local = capturar_valores_colunas(caminho_arquivo)
-            valores = f'{arquivo}\t{local}\t{profundidade}'
+            profundidade, local, mes = capturar_valores_colunas(caminho_arquivo)
+            valores = f'{arquivo}\t{local}\t{profundidade}\t{mes}'
 
             valores_tabela.append(valores)
+
         for valores in valores_tabela:
             tabela.write(f'{valores}\n')
 

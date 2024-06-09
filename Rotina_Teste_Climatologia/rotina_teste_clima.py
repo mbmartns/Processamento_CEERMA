@@ -114,7 +114,10 @@ def tabela_location(diretorio_origem, diretorio_teste):
         for valores in valores_tabela:
             tabela.write(f'{valores}\n')
 
-def ler_csv(arquivo_csv):
+    return tabela_local
+
+
+def ler_csv(tabela, arquivo_csv):
 
 
     pass
@@ -123,8 +126,12 @@ def ler_csv(arquivo_csv):
 # Obter os meses únicos
 meses = meses(diretorio_destino)
 print("Meses únicos:", meses)
-tabela_location(diretorio_origem, diretorio_teste)
+tabela = tabela_location(diretorio_origem, diretorio_teste)
 obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
+obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=s')
+
+
+
 
 #span_depSM, coordenadas = capturar_valores_colunas(diretorio_origem)
 

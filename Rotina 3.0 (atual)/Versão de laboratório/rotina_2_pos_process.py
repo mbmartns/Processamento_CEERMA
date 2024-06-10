@@ -8,7 +8,11 @@ import time
 
 
 nomes_colunas = None
+indice_colunas = {}
+
 def extrair_nomes_colunas(caminho_arquivo):
+
+    indice_colunas = {}
     colunas = '\t'
     
     with open(caminho_arquivo, 'r') as file:
@@ -24,8 +28,13 @@ def extrair_nomes_colunas(caminho_arquivo):
                     if nome_coluna == 'longitude':
                         nome_coluna = 'long'
                     colunas += f'{nome_coluna}\t'
+                partes = linha.split(" = ")
+                indice = int(partes[0].split(" ")[2])
+                nome = partes[1].strip()
+                indice_colunas[indice] = nome
     
-    return colunas
+    return colunas, indice_colunas
+
 
 def calcular_julian_days(ano, mes, dia, hora, minuto, segundo):
 
@@ -42,10 +51,18 @@ def calcular_julian_days(ano, mes, dia, hora, minuto, segundo):
     
     return julian_day
 
+def encontrar_indice_coluna(nome_coluna):
+    global indice_colunas
+    for indice, nome in indice_colunas.items():
+        if nome_coluna in nome:
+            return indice
+
+
 # Função para ler uma linha de cada arquivo de texto e escrever em um novo arquivo
 def ler_linha_de_cada_arquivo(diretorio_origem, diretorio_destino):
 
     global nomes_colunas  # Indica que vamos usar a variável global
+    global indice_colunas
 
     # copia Lista todos os arquivos copiados
     valores_jd = []
@@ -71,12 +88,11 @@ def ler_linha_de_cada_arquivo(diretorio_origem, diretorio_destino):
             print(f'Tratando informações do arquivo {arquivo}')
 
             if nomes_colunas == None:
-                nomes_colunas = extrair_nomes_colunas(caminho_arquivo)
+                nomes_colunas, indice_colunas = extrair_nomes_colunas(caminho_arquivo)
 
 
             # Abre cada arquivo de texto
             with open(caminho_arquivo, 'r') as arquivo_origem:
-
 
                 # Lê cada linha do arquivo
                 for linha in arquivo_origem:
@@ -130,7 +146,7 @@ def ler_linha_de_cada_arquivo(diretorio_origem, diretorio_destino):
         arquivo_jd.write('Arquivo\t\t\t\t\t\t\tJulian Day\t\t\t\t\t\tNMEA UTC (Time)\n')
         for valores in valores_jd:
             arquivo_jd.write(f'{valores}\n')
-
+            
 
 
 def conferir_dados(diretorio_destino, diretorio_qc):

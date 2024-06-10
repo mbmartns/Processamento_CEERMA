@@ -2,7 +2,7 @@ import gzip
 import shutil
 import os
 
-def extrair_arquivo_gz(caminho_arquivo, diretorio_destino, mes_abreviado):
+def extrair_arquivo_gz(caminho_arquivo, diretorio_destino, nome_teste, mes_abreviado):
     try:
         # Obtém o nome base do arquivo (sem o diretório)
         nome_arquivo = os.path.basename(caminho_arquivo)
@@ -18,9 +18,9 @@ def extrair_arquivo_gz(caminho_arquivo, diretorio_destino, mes_abreviado):
         print(f'Arquivo extraído com sucesso para {caminho_arquivo_descompactado}')
 
             # Renomeia o arquivo descompactado para o nome do mês abreviado
-        novo_caminho_arquivo = os.path.join(diretorio_destino, f"{mes_abreviado}.csv")
+        novo_caminho_arquivo = os.path.join(diretorio_destino, f"{nome_teste}{mes_abreviado}.csv")
         os.rename(caminho_arquivo_descompactado, novo_caminho_arquivo)
-
+        print(f'O arquivo extraído está em: {novo_caminho_arquivo}')
 
         return novo_caminho_arquivo
     except FileNotFoundError:

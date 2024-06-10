@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import NoSuchElementException
 from baixando_chromedriver import *
 from extraindo_arquivo import *
 import os
@@ -41,7 +42,7 @@ def config_chrome():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),  options=options)
     return driver
 
-def obter_arquivos(meses, url):
+def obter_arquivos(nome_teste, meses, url):
 
     diretorio_destino = './chromedriver'
     os.makedirs(diretorio_destino, exist_ok=True)
@@ -69,15 +70,12 @@ def obter_arquivos(meses, url):
 
     # Iniciar o WebDriver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),  options=options)
-
-
-    #driver = config_chrome()
-    #url = 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t'
     driver.get(url)
     time.sleep(2)
+    caminhos_arquivos = [] #lista com os caminhos de todos os arquivos extraídos
 
     # Função para clicar nos links dos meses fornecidos
-    def clicar_links_meses(meses):
+    def clicar_links_meses(meses, nome_teste):
         mes_map = {
             'Jan': 'January',
             'Feb': 'February',
@@ -92,7 +90,6 @@ def obter_arquivos(meses, url):
             'Nov': 'November',
             'Dec': 'December'
         }
-        
         for mes_abreviado in meses:
 
             mes_completo = mes_map[mes_abreviado]
@@ -108,6 +105,7 @@ def obter_arquivos(meses, url):
 
             files = os.listdir(download_dir)
             print("Arquivos baixado:", files)
+
             if files:
                 caminho_arquivo = os.path.join(download_dir, files[0])  # Pegue o primeiro arquivo na lista
 
@@ -116,20 +114,28 @@ def obter_arquivos(meses, url):
                 os.makedirs(diretorio_destino, exist_ok=True)
 
                     # Chama a função para extrair o arquivo .gz
-                caminho_arquivo_descompactado = extrair_arquivo_gz(caminho_arquivo, diretorio_destino, mes_abreviado)
+                caminho_arquivo_descompactado = extrair_arquivo_gz(caminho_arquivo, diretorio_destino, nome_teste, mes_abreviado)
+                
+                time.sleep(15)
+
                 # Deleta o arquivo baixado após extração
                 os.remove(caminho_arquivo)
 
-                if caminho_arquivo_descompactado:
-                    print(f'O arquivo extraído está em: {caminho_arquivo_descompactado}')
-                else:
-                    print('Falha ao extrair o arquivo.')
+                caminhos_arquivos.append(caminho_arquivo_descompactado)
 
-
-
-    # Encontrar e clicar no botão de opção "1/4°"
-    opcao_1_4 = driver.find_element(By.XPATH, '//input[@value="0.25"]')
-    opcao_1_4.click()
+    try:
+        # Tenta encontrar e clicar na opção "1/4°"
+        opcao_1_4 = driver.find_element(By.XPATH, '//input[@value="0.25"]')
+        opcao_1_4.click()
+        print("Opção 1/4° selecionada.")
+    except NoSuchElementException:
+        try:
+            # Se não encontrar a opção "1/4°", tenta encontrar a opção "1°"
+            opcao_1 = driver.find_element(By.XPATH, '//input[@value="1.00"]')
+            opcao_1.click()
+            print("Opção 1° selecionada.")
+        except NoSuchElementException:
+            pass
 
     # Encontrar e clicar no botão de opção "CSV"
     opcao_csv = driver.find_element(By.XPATH, '//input[@id="inlineRadiocsv"]')
@@ -149,7 +155,9 @@ def obter_arquivos(meses, url):
 
     # Selecionar a opção "Statistical mean"
     for option in select_available_fields.find_elements(By.TAG_NAME, 'option'):
-        if option.text == 'Statistical mean':
+        if option.text == 'Objectively analyzed standard deviation':
+           # Standard deviations
+           #Objectively analyzed standard deviation
             option.click()
             break
 
@@ -160,7 +168,8 @@ def obter_arquivos(meses, url):
     update_button.click()
 
     time.sleep(6)
-    clicar_links_meses(meses)
+    clicar_links_meses(meses, nome_teste)
+    return caminhos_arquivos
 
     # Encontrar e clicar no link "Annual"
     #link_anual = driver.find_element(By.XPATH, '//a[contains(text(), "Annual")]')
@@ -182,4 +191,5 @@ def obter_arquivos(meses, url):
 
 if __name__ == "__main__":
     meses = ['Oct', 'Jan', 'Nov']
-    obter_arquivos(meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
+    obter_arquivos("Tempe_oasd", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
+    #obter_arquivos("Sali_", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=s')

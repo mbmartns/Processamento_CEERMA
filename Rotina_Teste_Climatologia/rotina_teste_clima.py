@@ -28,9 +28,23 @@ for arquivo in os.listdir(diretorio_destino):
             # Copia o arquivo para o diretório de destino
         shutil.copy(caminho_arquivo_origem, caminho_arquivo_destino)
 
+nome_colunas = None
+for arquivo in os.listdir(diretorio_qc):
+    if nome_colunas:
+        continue
+    else:
+        caminho_arquivo = os.path.join(diretorio_qc, arquivo)
+        with open(caminho_arquivo, 'r') as tabela:
+            nome_colunas = tabela.readline().strip()
+
+
 tabela_temp = None
 tabela_oxy = None
 tabela_sal = None
+dp_temp = None
+dp_oxy = None
+dp_sal = None
+
 
 
 def meses(diretorio_destino):
@@ -137,7 +151,6 @@ def tabela_location(diretorio_origem, dir_info):
             tabela.write(f'{valores}\n')
     return tabela_local
 
-
 # Função para calcular a distância entre duas coordenadas usando a fórmula de Haversine
 def calcular_distancia(lat1, lon1, lat2, lon2):
     R = 6371.0  # Raio da Terra em km
@@ -176,18 +189,53 @@ def encontrar_localizacao_proxima(lat_alvo, lon_alvo, caminho_arquivo_csv):
 
     return head, melhor_linha
 
-def tabela_linha(dir_info, lista_arquivos_csv, tabela_local):
+def tabela_linha(dir_info, diretorio_csv, tabela_local):
 
     global tabela_temp
     global tabela_sal
     global tabela_oxy
+    global dp_temp
+    global dp_oxy
+    global dp_sal
 
-    for arquivo_csv in lista_arquivos_csv: #para saber de onde é o teste
+
+    lista_csv = os.listdir(diretorio_csv)
+    for nome_arquivo_csv in lista_csv:
+        arquivo_csv = os.path.join(diretorio_csv, nome_arquivo_csv)
         with open(arquivo_csv, 'r') as file:
             linhas = file.readlines()
         # Cabeçalho
             head = linhas[1]
-        if "Temp_" in arquivo_csv:
+
+        if 'DP_' in arquivo_csv:
+            if "Temp_" in arquivo_csv:
+                if dp_temp:
+                    continue
+                else:
+                    dp_temp = os.path.join(dir_info, 'Linhas_DP_Temperatura.txt')
+                    if not os.path.exists(dp_temp):
+                        with open(dp_temp, 'w') as tabela:
+                            tabela.write('Arquivo\t\tValores(profundidade)\n')
+                            tabela.write(f'{head}\n')
+            elif "Sal_" in arquivo_csv:
+                if dp_sal:
+                    continue
+                else:
+                    dp_sal = os.path.join(dir_info, 'Linhas_DP_Salinidade.txt')
+                    if not os.path.exists(dp_sal):
+                        with open(dp_sal, 'w') as tabela:
+                            tabela.write('Arquivo\t\tValores(profundidade)\n')
+                            tabela.write(f'{head}\n')
+            elif "Oxy_" in arquivo_csv:
+                if dp_oxy:
+                    continue
+                else:
+                    dp_oxy = os.path.join(dir_info, 'Linhas__DP_Oxigenio.txt')
+                    if not os.path.exists(dp_oxy):
+                        with open(dp_oxy, 'w') as tabela:
+                            tabela.write('Arquivo\t\tValores(profundidade)\n')
+                            tabela.write(f'{head}\n')
+        elif "Temp_" in arquivo_csv:
             if tabela_temp:
                 continue
             else:
@@ -225,24 +273,42 @@ def tabela_linha(dir_info, lista_arquivos_csv, tabela_local):
             profundidade = partes[2]
             mes = partes[3]
             lat, lon = map(float, localizacao.split(','))
-            for arquivo_csv in lista_arquivos_csv:
+
+
+            for nome_arquivo_csv in lista_csv:
+                arquivo_csv = os.path.join(diretorio_csv, nome_arquivo_csv)
+           # for arquivo_csv in lista_arquivos_csv:
                 if mes in arquivo_csv:
                     head, melhor_linha = encontrar_localizacao_proxima(lat, lon, arquivo_csv)
-                if "Oxy" in arquivo_csv:
-                    with open(tabela_oxy, 'a') as tabela:
-                        tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
-                elif "Temp" in arquivo_csv:
-                    with open(tabela_temp, 'a') as tabela:
-                        tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
-                elif  "Sal_" in arquivo_csv:
-                    with open(tabela_sal, 'a') as tabela:
-                        tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    print(f'O mês é {mes}')
+
+                    if "DP_Oxy" in arquivo_csv:
+                        with open(dp_oxy, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    elif "DP_Temp" in arquivo_csv:
+                        with open(dp_temp, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    elif "DP_Sal" in arquivo_csv:
+                        with open(dp_sal, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    elif "Oxy" in arquivo_csv:
+                        with open(tabela_oxy, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    elif "Temp" in arquivo_csv:
+                        with open(tabela_temp, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
+                    elif  "Sal" in arquivo_csv:
+                        with open(tabela_sal, 'a') as tabela:
+                            tabela.write(f'{nome_arquivo}\t{melhor_linha}\n')
 
     ref_temp = pegar_dados(tabela_temp)
     ref_sal = pegar_dados(tabela_sal)
     ref_oxy = pegar_dados(tabela_oxy)
-    return ref_temp, ref_sal, ref_oxy
-
+    ref_dp_temp = pegar_dados(dp_temp)
+    ref_dp_sal = pegar_dados(dp_sal)
+    ref_dp_oxy = pegar_dados(dp_oxy)
+    print(ref_temp, ref_sal, ref_oxy,ref_dp_temp, ref_dp_sal, ref_dp_oxy)
+    return ref_temp, ref_sal, ref_oxy,ref_dp_temp, ref_dp_sal, ref_dp_oxy
 
 def pegar_dados(tabela_referencia):
     dados_referencia = {}
@@ -252,7 +318,7 @@ def pegar_dados(tabela_referencia):
         header = linhas[0].strip().split('\t')
         profundidades = list(map(float, linhas[1].strip().split(':')[1].split(',')))
 
-        for linha in linhas[2:]:
+        for linha in linhas[3:]:
             partes = linha.strip().split('\t')
             nome_arquivo = partes[0]
             valores = [float(v) if v else None for v in partes[1].split(',')]
@@ -260,26 +326,101 @@ def pegar_dados(tabela_referencia):
     
     return dados_referencia
 
-def ler_e_comparar(dir_flag, diretorio_destino, caminho_dados, lista_arquivos_csv, limite_proximidade=150):
+# Função para mapear profundidades para as referências corretas
+def map_depth_to_reference(depth):
+    depth_intervals = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95,
+                       100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475,
+                       500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200,
+                       1250, 1300, 1350, 1400, 1450, 1500]
 
-    ref_temp, ref_sal, ref_oxy = tabela_linha(dir_info, lista_arquivos_csv, tabela_local)
+    if depth <= 100:
+        return (depth // 5) * 5
+    elif depth <= 500:
+        return ((depth - 100) // 25) * 25 + 100
+    else:
+        return ((depth - 500) // 50) * 50 + 500
 
-    resultados_comparacao = []
+# Função para obter a referência interpolada
+def obter_referencia_interpolada(profundidade, referencias):
+    ref_depth = map_depth_to_reference(profundidade)
+    return referencias.get(ref_depth, None)
+
+# Função para aplicar o teste
+def aplicar_teste(valor, referencia, desvio_padrao):
+    if referencia is None or desvio_padrao is None:
+        #print('olha so deu 2')
+        return '2'  # Se não houver referência ou desvio padrão, consideramos como 2
+    if abs(valor - referencia) >  abs(desvio_padrao):
+       # print('olha so deu erro!')
+        return '4'
+        
+    return '1'
+
+# Função para processar uma linha
+def processar_linha(colunas, referencia_temp, referencia_sal, referencia_oxy, referencia_dp_temp, referencia_dp_sal, referencia_dp_oxy):
+    valor_temp = float(colunas[8])
+    valor_sal = float(colunas[17])
+    valor_profundidade = float(colunas[7])
+    valor_oxy = float(colunas[22])
+
+    ref_temp = obter_referencia_interpolada(valor_profundidade, referencia_temp)
+    ref_sal = obter_referencia_interpolada(valor_profundidade, referencia_sal)
+    ref_oxy = obter_referencia_interpolada(valor_profundidade, referencia_oxy)
+    dp_temp = obter_referencia_interpolada(valor_profundidade, referencia_dp_temp)
+    dp_sal = obter_referencia_interpolada(valor_profundidade, referencia_dp_sal)
+    dp_oxy = obter_referencia_interpolada(valor_profundidade, referencia_dp_oxy)
+
+    #print(f'valor temp:{valor_temp}, valor ref: {ref_temp}, desvio: {dp_temp}')
+    resultado_temp = aplicar_teste(valor_temp, ref_temp, dp_temp)
+    resultado_sal = aplicar_teste(valor_sal, ref_sal, dp_sal)
+    resultado_oxy = aplicar_teste(valor_oxy, ref_oxy, dp_oxy)
+    #if resultado_oxy == '4':
+     #   print(f'valor oxy:{valor_oxy}, valor ref: {ref_oxy}, desvio: {dp_oxy}')
+    #if resultado_sal == '4':
+    #    print(f'valor sal:{valor_sal}, valor ref: {ref_sal}, desvio: {dp_sal}')
+   # if resultado_temp == '4':
+    #    print(f'dif temp:{abs(valor_temp - ref_temp)}, desvio: {abs(dp_temp)}')
+
+
+        #print()
+
+    return resultado_temp, resultado_sal, resultado_oxy
+
+
+def ler_e_comparar(dir_flag, dir_info, tabela_local, diretorio_csv, dir_qc):
+
+    #ref_temp, ref_sal, ref_oxy, ref_dp_temp, ref_dp_sal, ref_dp_oxy = tabela_linha(dir_info, diretorio_csv, tabela_local)
+    global ref_temp
+    global ref_sal
+    global ref_oxy
+    global ref_dp_temp
+    global ref_dp_sal
+    global ref_dp_oxy
+    erros_sal = 0
+    erros_temp = 0
+    erros_oxy = 0
+    total_linhas = 0
+
     arquivos = os.listdir(dir_flag)
     for arquivo in arquivos:
-        linhas_validas = []
         caminho_arquivo = os.path.join(dir_flag, arquivo)
         if arquivo.endswith('.cnv'):  # Verifica se é um arquivo cnv
             with open(caminho_arquivo, 'r+') as cnv_tratado:
+                print(arquivo)
                 # Lê cada linha do arquivo e armazena em uma lista
                 linhas = cnv_tratado.readlines()
                 linhas_limpas = []
                 # Retorna ao início do arquivo
                 cnv_tratado.seek(0)
 
-                referencia_temp = ref_temp[arquivo].items()
-                referencia_sal = ref_sal[arquivo].items()
-                referencia_oxy = ref_oxy[arquivo].items()
+                # Obtém as referências correspondentes para o arquivo atual
+                referencia_temp = ref_temp.get(arquivo, {})
+                referencia_sal = ref_sal.get(arquivo, {})
+                referencia_oxy = ref_oxy.get(arquivo, {})
+                referencia_dp_temp = ref_dp_temp.get(arquivo, {})
+                referencia_dp_sal = ref_dp_sal.get(arquivo, {})
+                referencia_dp_oxy = ref_dp_oxy.get(arquivo, {})
+
 
                     # Iterar sobre as linhas do arquivo
                 for i in range(len(linhas)):
@@ -287,7 +428,13 @@ def ler_e_comparar(dir_flag, diretorio_destino, caminho_dados, lista_arquivos_cs
                     # Verifica se a linha começa com "Test"
                     if linha.startswith("Test") or linha.startswith("Flags"):
                     # Se começar com "Test", pule esta linha
-                        cnv_tratado.write(linha)
+                        if linha.startswith("Test 8"):
+                            cnv_tratado.write(linha.rstrip('\n'))
+                            cnv_tratado.write('\nTest 9 => Climatology test for Temperature')
+                            cnv_tratado.write('\nTest 10 => Climatology test for Salinity')
+                            cnv_tratado.write('\nTest 11 => Climatology test for Oxygen\n')
+                        else:
+                            cnv_tratado.write(linha)
                         continue
 
                     # Divide a linha em colunas usando espaços como delimitador
@@ -298,75 +445,78 @@ def ler_e_comparar(dir_flag, diretorio_destino, caminho_dados, lista_arquivos_cs
 
                     qc_remove = False
                     
-                    if len(colunas) >= 19: #and colunas[10].replace('.', '').isdigit():
+                    if len(colunas) >= 19: 
 
-                        valor_temp = float(colunas[8])
-                        valor_sal = float(colunas[17])
-                        valor_profundidade = float(colunas[7])
-                        valor_oxy = float(colunas[19])
+                        resultado_temp, resultado_sal, resultado_oxy = processar_linha(
+                            colunas, referencia_temp, referencia_sal, referencia_oxy, 
+                            referencia_dp_temp, referencia_dp_sal, referencia_dp_oxy
+                        )
 
-                        valor = float(row[valor_idx])
-
-                        resultado_temperatura = aplicar_teste(valor_profundidade, valor_temp, referencia_temp, limite_proximidade)
-                        resultado_salinidade = aplicar_teste(valor_profundidade, valor_sal, referencia_sal, limite_proximidade)
-                        resultado_oxigenio = aplicar_teste(valor_profundidade, valor_oxy, referencia_oxy, limite_proximidade)
-
-
-
-
-
-                        if valor_temp == valor_sal:
-                            resultado_5 += '4'
+                        if resultado_temp == '4':
+                            erros_temp += 1
                             qc_remove = True
 
+                        if resultado_oxy == '4':
+                            erros_oxy += 1
+                            qc_remove = True
 
+                        if resultado_sal == '4':
+                            erros_sal += 1
+                            qc_remove = True
 
-                        linha = linha.rstrip('\n') + resultado_temp + resultado_sal + resultado_oxy + '\n'
-
+                        linha = linha.rstrip('\n') + f'\t{resultado_temp}\t{resultado_sal}\t{resultado_oxy}\n'
+                        total_linhas += 1
                         if qc_remove == False:
                             linhas_limpas.append(linha)
 
-                    # Escreve a linha modificada de volta no arquivo
+                    
+                    
                     cnv_tratado.write(linha)
+            criar_arquivo_qc(linhas_limpas, dir_qc, arquivo)
+
+    print(f'total de linhas avaliadas: {total_linhas}')
+    print(f'total de erros de temperatura: {erros_temp}')
+    print(f'total de erros de salinidade: {erros_sal}')
+    print(f'total de erros de oxigenio: {erros_oxy}')
 
 
-def aplicar_teste(valor_profundidade, valor_teste, dados_referencia, limite_proximidade):
-    resultados_comparacao = []
-    # Encontre a profundidade de referência mais próxima
-    valores_proximos = []
-    for prof_ref, valor_ref in dados_referencia.items():
-        if abs(valor_profundidade - prof_ref) <= limite_proximidade:
-            valores_proximos.append((prof_ref, valor_ref))
+def criar_arquivo_qc(linhas_limpas, dir_qc, arquivo):
 
-    if valores_proximos:
-        prof_proxima, valor_ref_proximo = min(valores_proximos, key=lambda x: abs(x[0] - valor_profundidade))
-        resultados_comparacao.append((valor_profundidade, valor_teste, prof_proxima, valor_ref_proximo))
-    else:
-        resultados_comparacao.append((valor_profundidade, valor_teste, None, None))
+    global nome_colunas  
+
+    caminho_arquivo = os.path.join(dir_qc, arquivo)
+    with open(caminho_arquivo, 'w') as novo_arquivo:
+        novo_arquivo.write(f'{nome_colunas}' + f'\tTest 9\tTest 10\tTest 11\n')
+        for linha in linhas_limpas:
+            novo_arquivo.write(linha)
 
 
+dp_temp = os.path.join(dir_info, 'Linhas_DP_Temperatura.txt')
+dp_sal = os.path.join(dir_info, 'Linhas_DP_Salinidade.txt')
+dp_oxy = os.path.join(dir_info, 'Linhas__DP_Oxigenio.txt')
+tabela_temp = os.path.join(dir_info, 'Linhas_Temperatura.txt')
+tabela_sal = os.path.join(dir_info, 'Linhas_Salinidade.txt')
+tabela_oxy = os.path.join(dir_info, 'Linhas_Oxigenio.txt')
 
 
+ref_temp = pegar_dados(tabela_temp)
+ref_sal = pegar_dados(tabela_sal)
+ref_oxy = pegar_dados(tabela_oxy)
+ref_dp_temp = pegar_dados(dp_temp)
+ref_dp_sal = pegar_dados(dp_sal)
+ref_dp_oxy = pegar_dados(dp_oxy)
 
 # Obter os meses únicos
 meses = meses(diretorio_destino)
-#print("Meses únicos:", meses)
+print("Meses únicos:", meses)
 tabela_local = tabela_location(diretorio_origem, dir_info)
 
-temperatura = obter_arquivos("Temp_", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
+#temperatura = obter_arquivos("Temp_", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=t')
 #salinidade = obter_arquivos("Sal_", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23.pl?parameterOption=s')
 #oxigenio = obter_arquivos("Oxy_", meses, 'https://www.ncei.noaa.gov/access/world-ocean-atlas-2023/bin/woa23oxnu.pl?parameterOption=o')
 
+diretorio_csv = './extraido/'
 
-#ref_temperatura = tabela_linha(dir_info, temperatura, tabela_local)
-#ref_salinidade = tabela_linha(dir_info, salinidade, tabela_local)
-#ref_oxigenio = tabela_linha(dir_info, oxigenio, tabela_local)
+#tabela_linha(dir_info, diretorio_csv, tabela_local)
 
-
-#span_depSM, coordenadas = capturar_valores_colunas(diretorio_origem)
-
-#print("Span para depSM:", span_depSM)
-#print("Coordenadas (latitude, longitude):", coordenadas)
-
-
-
+ler_e_comparar(dir_flag, dir_info, tabela_local, diretorio_csv, dir_qc)

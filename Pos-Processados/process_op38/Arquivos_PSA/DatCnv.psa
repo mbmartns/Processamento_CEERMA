@@ -22,7 +22,7 @@
   <ScanRangeDuration value="8.000000" />
   <StartTimeOption value="1" />
   <PromptForNoteAndOrStartTime value="0" />
-  <CalcArray Size="22">
+  <CalcArray Size="25">
     <CalcArrayItem index="0" CalcID="72">
       <Calc UnitID="-1" Ordinal="0">
         <FullName value="Scan Count" />
@@ -141,6 +141,24 @@
     <CalcArrayItem index="21" CalcID="15">
       <Calc UnitID="53" Ordinal="1">
         <FullName value="Density, 2 [sigma-theta, kg/m^3]" />
+      </Calc>
+    </CalcArrayItem>
+    <CalcArrayItem index="22" CalcID="55">
+      <Calc UnitID="61" Ordinal="0">
+        <FullName value="Oxygen, SBE 43 [umol/kg]" />
+        <WindowSize value="2.000000" />
+        <ApplyHysteresisCorrection value="1" />
+        <ApplyTauCorrection value="1" />
+      </Calc>
+    </CalcArrayItem>
+    <CalcArrayItem index="23" CalcID="127">
+      <Calc UnitID="61" Ordinal="0">
+        <FullName value="Oxygen Saturation, Garcia &amp; Gordon [umol/kg]" />
+      </Calc>
+    </CalcArrayItem>
+    <CalcArrayItem index="24" CalcID="54">
+      <Calc UnitID="61" Ordinal="0">
+        <FullName value="Oxygen Saturation, Weiss [umol/kg]" />
       </Calc>
     </CalcArrayItem>
   </CalcArray>

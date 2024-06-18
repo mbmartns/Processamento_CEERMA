@@ -22,7 +22,7 @@
 ** PROFUNDIDADE:
 ** DATA/HORA: 20022Z/OUT/19
 ** OPERADOR: CTTECCHIO
-# nquan = 30
+# nquan = 33
 # nvalues = 12                          
 # units = specified
 # name 0 = scan: Scan Count
@@ -47,14 +47,17 @@
 # name 19 = sbeox0ML/L: Oxygen, SBE 43 [ml/l]
 # name 20 = sigma-é00: Density [sigma-theta, kg/m^3]
 # name 21 = sigma-é11: Density, 2 [sigma-theta, kg/m^3]
-# name 22 = sal00: Salinity, Practical [PSU]
-# name 23 = sigma-é00: Density [sigma-theta, kg/m^3]
-# name 24 = svCM: Sound Velocity [Chen-Millero, m/s]
-# name 25 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
-# name 26 = gsw_ptA0: potential temperature [ITS-90, deg C]
-# name 27 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
-# name 28 = gsw_saA0: Absolute Salinity [g/kg]
-# name 29 = flag:
+# name 22 = sbox0Mm/Kg: Oxygen, SBE 43 [umol/kg]
+# name 23 = oxsolMm/Kg: Oxygen Saturation, Garcia & Gordon [umol/kg]
+# name 24 = oxsatMm/Kg: Oxygen Saturation, Weiss [umol/kg]
+# name 25 = sal00: Salinity, Practical [PSU]
+# name 26 = sigma-é00: Density [sigma-theta, kg/m^3]
+# name 27 = svCM: Sound Velocity [Chen-Millero, m/s]
+# name 28 = svCM1: Sound Velocity, 2 [Chen-Millero, m/s]
+# name 29 = gsw_ptA0: potential temperature [ITS-90, deg C]
+# name 30 = gsw_densityA0: density, TEOS-10 [density, kg/m^3]
+# name 31 = gsw_saA0: Absolute Salinity [g/kg]
+# name 32 = flag:
 # span 0 =       1966,      10145       
 # span 1 = 293.099003, 293.102948       
 # span 2 =  -44.60680,  -44.60472       
@@ -77,14 +80,17 @@
 # span 19 =     5.8101,     6.2703      
 # span 20 =    26.4627,    26.4828      
 # span 21 =    26.4676,    26.4895      
-# span 22 =    34.7761,    34.7853      
-# span 23 =    26.4633,    26.4831      
-# span 24 =    1495.57,    1495.95      
-# span 25 =    1495.57,    1495.96      
-# span 26 =    11.6465,    11.7837      
-# span 27 =  1026.4763,  1026.5448      
-# span 28 =    34.9405,    34.9503      
-# span 29 = 0.0000e+00, 0.0000e+00      
+# span 22 =    252.786,    272.810      
+# span 23 =  264.84334,  265.61202      
+# span 24 =  264.84559,  265.62438      
+# span 25 =    34.7761,    34.7853      
+# span 26 =    26.4633,    26.4831      
+# span 27 =    1495.57,    1495.95      
+# span 28 =    1495.57,    1495.96      
+# span 29 =    11.6465,    11.7837      
+# span 30 =  1026.4763,  1026.5448      
+# span 31 =    34.9405,    34.9503      
+# span 32 = 0.0000e+00, 0.0000e+00      
 # interval = decibars: 1                
 # start_time = Oct 20 2019 02:21:12 [NMEA time, header]
 # bad_flag = -9.990e-29
@@ -294,49 +300,49 @@
 #     <!-- A/D voltage 3, Free -->
 #   </sensor>
 # </Sensors>
-# datcnv_date = Apr 01 2024 18:07:38, 7.26.7.129 [datcnv_vars = 22]
+# datcnv_date = Jun 17 2024 05:26:30, 7.26.7.129 [datcnv_vars = 25]
 # datcnv_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_008b.hex C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_008b.CON
 # datcnv_skipover = 1944
 # datcnv_ox_hysteresis_correction = yes
 # datcnv_ox_tau_correction = yes
-# alignctd_date = Apr 01 2024 18:07:39, 7.26.7.129
+# alignctd_date = Jun 17 2024 05:26:31, 7.26.7.129
 # alignctd_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # alignctd_adv = c0S/m 0.073, c1S/m 0.073                                                                                                                                                                                            
-# wildedit_date = Apr 01 2024 18:07:39, 7.26.7.129
+# wildedit_date = Jun 17 2024 05:26:32, 7.26.7.129
 # wildedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # wildedit_pass1_nstd = 2.0
 # wildedit_pass2_nstd = 20.0
 # wildedit_pass2_mindelta = 0.000e+000
 # wildedit_npoint = 100
-# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
+# wildedit_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11 sbox0Mm/Kg oxsolMm/Kg oxsatMm/Kg
 # wildedit_excl_bad_scans = yes
-# filter_date = Apr 01 2024 18:07:39, 7.26.7.129
+# filter_date = Jun 17 2024 05:26:33, 7.26.7.129
 # filter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # filter_low_pass_tc_A = 0.030
 # filter_low_pass_tc_B = 0.150
-# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11
+# filter_low_pass_A_vars = latitude longitude dz/dtM avgsvCM prDM depSM t090C t190C T2-T190C potemp090C potemp190C potemp90Cdiff c0S/m c1S/m C2-C1S/m sal00 sal11 sbeox0ML/L sigma-é00 sigma-é11 sbox0Mm/Kg oxsolMm/Kg oxsatMm/Kg
 # filter_low_pass_B_vars =
-# celltm_date = Apr 01 2024 18:07:40, 7.26.7.129
+# celltm_date = Jun 17 2024 05:26:33, 7.26.7.129
 # celltm_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # celltm_alpha = 0.0300, 0.0300
 # celltm_tau = 7.0000, 7.0000
 # celltm_temp_sensor_use_for_cond = primary, secondary
-# loopedit_date = Apr 01 2024 18:07:40, 7.26.7.129
+# loopedit_date = Jun 17 2024 05:26:34, 7.26.7.129
 # loopedit_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # loopedit_minVelocity = 0.000                                                                                            
 # loopedit_surfaceSoak: do not remove                                                                                     
 # loopedit_excl_bad_scans = yes
-# wfilter_date = Apr 01 2024 18:07:41, 7.26.7.129
+# wfilter_date = Jun 17 2024 05:26:35, 7.26.7.129
 # wfilter_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # wfilter_excl_bad_scans = yes
 # wfilter_action depSM = median, 24
 # wfilter_action c0S/m = median, 5
-# Derive_date = Apr 01 2024 18:07:41, 7.26.7.129 [derive_vars = 4]
+# Derive_date = Jun 17 2024 05:26:35, 7.26.7.129 [derive_vars = 4]
 # Derive_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\Copia_Dados\operantar38_008B.CON
-# DeriveTEOS_10_date = Apr 01 2024 18:07:42, 7.26.7.129 [DeriveTEOS_10_vars = 3]
+# DeriveTEOS_10_date = Jun 17 2024 05:26:36, 7.26.7.129 [DeriveTEOS_10_vars = 3]
 # DeriveTEOS_10_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # Using the GSW Toolkit version 3.01
-# binavg_date = Apr 01 2024 18:07:42, 7.26.7.129
+# binavg_date = Jun 17 2024 05:26:36, 7.26.7.129
 # binavg_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # binavg_bintype = decibars
 # binavg_binsize = 1
@@ -346,19 +352,19 @@
 # binavg_min_scans_bin = 1
 # binavg_max_scans_bin = 2147483647
 # binavg_surface_bin = yes, min = 0.000, max = 2.000, value = 0.000
-# strip_date = Apr 01 2024 18:07:44, 7.26.7.129
+# strip_date = Jun 17 2024 05:26:38, 7.26.7.129
 # strip_in = C:\Users\comet\Desktop\Processamento_CEERMA\Pos-Processados\process_op38\operantar38_008b.cnv
 # file_type = ascii
 *END*
-       1966 293.099003  -44.60680  -46.65827     -0.093       0.00     13.000     12.896    11.6481    11.6470    -0.0011    11.6465    11.6454    -0.0011   3.944050   3.944810   0.000740    34.7771    34.7853     5.8101    26.4828    26.4895    34.7774    26.4831    1495.57    1495.57    11.6465  1026.5448    34.9418 0.0000e+00
-       2180 293.099106  -44.60676  -52.49074     -0.131       0.00     12.000     11.900    11.6651    11.6649    -0.0003    11.6636    11.6634    -0.0003   3.945501   3.946059   0.000577    34.7758    34.7822     6.2703    26.4786    26.4833    34.7761    26.4789    1495.61    1495.61    11.6636  1026.5362    34.9405 0.0000e+00
-       4951 293.100443  -44.60559  -52.13801     -0.293       0.00     11.000     10.912    11.6937    11.6919    -0.0018    11.6923    11.6905    -0.0018   3.948363   3.948755   0.000410    34.7775    34.7833     6.2348    26.4746    26.4793    34.7779    26.4749    1495.69    1495.69    11.6923  1026.5277    34.9423 0.0000e+00
-       8450 293.102130  -44.60526  -52.13701     -0.152       0.00     10.000      9.916    11.7514    11.7485    -0.0029    11.7501    11.7472    -0.0029   3.954329   3.954706   0.000361    34.7814    34.7876     6.2407    26.4667    26.4721    34.7829    26.4679    1495.88    1495.88    11.7501  1026.5164    34.9475 0.0000e+00
-       8049 293.101937  -44.60526  -52.13712     -0.474       0.00      9.000      8.927    11.7695    11.7709     0.0014    11.7684    11.7698     0.0014   3.956025   3.956762   0.000759    34.7824    34.7885     6.2419    26.4640    26.4686    34.7829    26.4645    1495.93    1495.94    11.7684  1026.5084    34.9474 0.0000e+00
-       8113 293.101968  -44.60525  -52.13710     -0.347       0.00      8.000      7.935    11.7783    11.7733    -0.0050    11.7772    11.7723    -0.0050   3.957039   3.957146   0.000128    34.7840    34.7897     6.2266    26.4636    26.4690    34.7852    26.4645    1495.94    1495.93    11.7772  1026.5038    34.9494 0.0000e+00
-       8193 293.102006  -44.60523  -52.13708     -0.347       0.00      7.000      6.945    11.7846    11.7851     0.0005    11.7837    11.7842     0.0005   3.957600   3.958319   0.000724    34.7844    34.7911     6.2156    26.4627    26.4678    34.7851    26.4633    1495.95    1495.96    11.7837  1026.4981    34.9494 0.0000e+00
-       8287 293.102051  -44.60521  -52.13705     -0.218       0.00      6.000      5.950    11.7831    11.7817    -0.0014    11.7823    11.7810    -0.0014   3.957393   3.957862   0.000471    34.7847    34.7908     6.2127    26.4632    26.4681    34.7850    26.4634    1495.93    1495.93    11.7823  1026.4938    34.9493 0.0000e+00
-       8360 293.102087  -44.60519  -52.13703     -0.334       0.00      5.000      4.962    11.7832    11.7834     0.0002    11.7826    11.7828     0.0002   3.957389   3.958030   0.000642    34.7852    34.7911     6.2046    26.4635    26.4681    34.7853    26.4636    1495.91    1495.92    11.7826  1026.4895    34.9495 0.0000e+00
-       8454 293.102132  -44.60518  -52.13700     -0.260       0.00      4.000      3.966    11.7823    11.7822    -0.0002    11.7818    11.7816    -0.0002   3.957244   3.957838   0.000593    34.7851    34.7911     6.2023    26.4636    26.4683    34.7851    26.4636    1495.89    1495.90    11.7818  1026.4858    34.9503 0.0000e+00
-       8857 293.102326  -44.60511  -52.13689     -0.263       0.00      3.000      2.971    11.7739    11.7762     0.0022    11.7736    11.7758     0.0022   3.956221   3.957120   0.000876    34.7845    34.7907     6.2020    26.4647    26.4691    34.7834    26.4638    1495.84    1495.86    11.7736  1026.4817    34.9488 0.0000e+00
-      10145 293.102948  -44.60472  -52.13654     -0.706       0.00      2.000      2.015    11.7747    11.7825     0.0078    11.7744    11.7822     0.0078   3.956347   3.957687   0.001289    34.7848    34.7903     6.2035    26.4647    26.4676    34.7844    26.4644    1495.83    1495.86    11.7744  1026.4763    34.9478 0.0000e+00
+       1966 293.099003  -44.60680  -46.65827     -0.093       0.00     13.000     12.896    11.6481    11.6470    -0.0011    11.6465    11.6454    -0.0011   3.944050   3.944810   0.000740    34.7771    34.7853     5.8101    26.4828    26.4895    252.786  265.61202  265.62438    34.7774    26.4831    1495.57    1495.57    11.6465  1026.5448    34.9418 0.0000e+00
+       2180 293.099106  -44.60676  -52.49074     -0.131       0.00     12.000     11.900    11.6651    11.6649    -0.0003    11.6636    11.6634    -0.0003   3.945501   3.946059   0.000577    34.7758    34.7822     6.2703    26.4786    26.4833    272.810  265.52016  265.53123    34.7761    26.4789    1495.61    1495.61    11.6636  1026.5362    34.9405 0.0000e+00
+       4951 293.100443  -44.60559  -52.13801     -0.293       0.00     11.000     10.912    11.6937    11.6919    -0.0018    11.6923    11.6905    -0.0018   3.948363   3.948755   0.000410    34.7775    34.7833     6.2348    26.4746    26.4793    271.265  265.35883  265.36778    34.7779    26.4749    1495.69    1495.69    11.6923  1026.5277    34.9423 0.0000e+00
+       8450 293.102130  -44.60526  -52.13701     -0.152       0.00     10.000      9.916    11.7514    11.7485    -0.0029    11.7501    11.7472    -0.0029   3.954329   3.954706   0.000361    34.7814    34.7876     6.2407    26.4667    26.4721    271.524  265.03244  265.03712    34.7829    26.4679    1495.88    1495.88    11.7501  1026.5164    34.9475 0.0000e+00
+       8049 293.101937  -44.60526  -52.13712     -0.474       0.00      9.000      8.927    11.7695    11.7709     0.0014    11.7684    11.7698     0.0014   3.956025   3.956762   0.000759    34.7824    34.7885     6.2419    26.4640    26.4686    271.577  264.93044  264.93379    34.7829    26.4645    1495.93    1495.94    11.7684  1026.5084    34.9474 0.0000e+00
+       8113 293.101968  -44.60525  -52.13710     -0.347       0.00      8.000      7.935    11.7783    11.7733    -0.0050    11.7772    11.7723    -0.0050   3.957039   3.957146   0.000128    34.7840    34.7897     6.2266    26.4636    26.4690    270.912  264.87964  264.88235    34.7852    26.4645    1495.94    1495.93    11.7772  1026.5038    34.9494 0.0000e+00
+       8193 293.102006  -44.60523  -52.13708     -0.347       0.00      7.000      6.945    11.7846    11.7851     0.0005    11.7837    11.7842     0.0005   3.957600   3.958319   0.000724    34.7844    34.7911     6.2156    26.4627    26.4678    270.432  264.84334  264.84559    34.7851    26.4633    1495.95    1495.96    11.7837  1026.4981    34.9494 0.0000e+00
+       8287 293.102051  -44.60521  -52.13705     -0.218       0.00      6.000      5.950    11.7831    11.7817    -0.0014    11.7823    11.7810    -0.0014   3.957393   3.957862   0.000471    34.7847    34.7908     6.2127    26.4632    26.4681    270.305  264.85146  264.85383    34.7850    26.4634    1495.93    1495.93    11.7823  1026.4938    34.9493 0.0000e+00
+       8360 293.102087  -44.60519  -52.13703     -0.334       0.00      5.000      4.962    11.7832    11.7834     0.0002    11.7826    11.7828     0.0002   3.957389   3.958030   0.000642    34.7852    34.7911     6.2046    26.4635    26.4681    269.951  264.85009  264.85245    34.7853    26.4636    1495.91    1495.92    11.7826  1026.4895    34.9495 0.0000e+00
+       8454 293.102132  -44.60518  -52.13700     -0.260       0.00      4.000      3.966    11.7823    11.7822    -0.0002    11.7818    11.7816    -0.0002   3.957244   3.957838   0.000593    34.7851    34.7911     6.2023    26.4636    26.4683    269.852  264.85473  264.85716    34.7851    26.4636    1495.89    1495.90    11.7818  1026.4858    34.9503 0.0000e+00
+       8857 293.102326  -44.60511  -52.13689     -0.263       0.00      3.000      2.971    11.7739    11.7762     0.0022    11.7736    11.7758     0.0022   3.956221   3.957120   0.000876    34.7845    34.7907     6.2020    26.4647    26.4691    269.841  264.90277  264.90582    34.7834    26.4638    1495.84    1495.86    11.7736  1026.4817    34.9488 0.0000e+00
+      10145 293.102948  -44.60472  -52.13654     -0.706       0.00      2.000      2.015    11.7747    11.7825     0.0078    11.7744    11.7822     0.0078   3.956347   3.957687   0.001289    34.7848    34.7903     6.2035    26.4647    26.4676    269.904  264.89689  264.89989    34.7844    26.4644    1495.83    1495.86    11.7744  1026.4763    34.9478 0.0000e+00

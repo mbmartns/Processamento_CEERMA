@@ -1,0 +1,17 @@
+Test 1 => T2-T190C: Temperature Difference, 2 - 1 [ITS-90, deg C] < 0.005
+Test 2 => C2-C1S/m: Conductivity Difference, 2 - 1 [S/m] < 0.005
+Test 3 => Impossible Locations Test (-90 <= lat <= 90) & (-180 <= long <= 180)
+Test 4 => Position on land Test
+Test 5 => Stuck Value Test
+Test 6 => Global Range Test
+Test 7 => Spike Test for Temperature
+Test 8 => Spike Test for Salinity
+Test 9 => Climatology test for Temperature
+Test 10 => Climatology test for Salinity
+Test 11 => Climatology test for Oxygen
+
+Flags: '1' - Good Data     '2' - Probably Good Data    '3' - Probably Bad Data     '4' - Bad Data
+
+
+       2112  17.411458  -39.54770  -54.39120      0.012    1474.69     35.000     34.738     6.1617     6.1586    -0.0031     6.1587     6.1556    -0.0031   3.371381   3.371660   0.000236    34.0840    34.0897     7.3954    26.8087    26.8136    321.653  301.18408  301.70192    34.0825    26.8075    1474.80    1474.79     6.1587  1026.9698    34.2434 0.0000e+00	1	1	1	1	1	1	2	2	1	1	1
+       4044  17.412389  -39.54770  -54.39120      0.385    1474.69     36.000     35.698     6.0228     6.0309     0.0081     6.0197     6.0279     0.0081   3.359647   3.360831   0.001332    34.0846    34.0915     7.3982    26.8268    26.8312    321.770  302.15518  302.68936    34.0897    26.8309    1474.28    1474.31     6.0198  1026.9979    34.2509 0.0000e+00	4	1	1	1	1	1	2	2	1	1	1

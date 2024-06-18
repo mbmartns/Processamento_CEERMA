@@ -383,7 +383,7 @@ def criar_arquivo_qc(linhas_limpas, diretorio_qc, arquivo):
 
     caminho_arquivo = os.path.join(diretorio_qc, arquivo)
     with open(caminho_arquivo, 'w') as novo_arquivo:
-        novo_arquivo.write(f'{nomes_colunas}\n')
+        novo_arquivo.write(f'{nomes_colunas}' + f'Test 1\tTest 2\tTest 3\tTest 4\tTest 5\tTest 6\tTest 7\tTest 8\n')
         for linha in linhas_limpas:
             novo_arquivo.write(linha)  # Você pode escrever algum conteúdo se desejar
 
@@ -396,6 +396,11 @@ if novo_pos_processamento == 's':
     diretorio_origem = os.path.join(pasta_pos_proc, 'Dados')
     diretorio_destino = os.path.join(pasta_pos_proc, 'Dados_Flags')
     diretorio_qc = os.path.join(pasta_pos_proc, 'Quality_Control')
+
+    # Criar os diretórios
+    os.makedirs(diretorio_origem, exist_ok=True)
+    os.makedirs(diretorio_destino, exist_ok=True)
+    os.makedirs(diretorio_qc, exist_ok=True)
 
 
 elif novo_pos_processamento == 'n':

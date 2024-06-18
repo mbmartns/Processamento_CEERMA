@@ -569,9 +569,6 @@ while True:
             pasta_copia = pasta_processados / (nome_copia + '//')
             shutil.copytree(pasta, pasta_copia)
 
-            #nome_processados = input('Nomeie a sua pasta de dados processados: (use _ no lugar de espaços)')
-           # pasta_processados = pasta.parent / nome_processados
-            #os.mkdir(pasta_processados)
             nome_pasta_bat = 'Batch_file'
             caminho_bat = os.path.join(pasta_processados, nome_pasta_bat)
             nome_pasta_garrafa = 'Arquivos_BTL'
@@ -737,27 +734,6 @@ while True:
             if estações_completas and arq_configu != None:
                 list_print('Todas as estações estão completas.')
             lista_arquivos = os.listdir(pasta_copia)
-
-
-            # # CRIANDO PASTA DE DADOS PROCESSADOS    
-            # nome_processados = input('Nomeie a sua pasta de dados processados: (use _ no lugar de espaços)')
-            # pasta_processados = pasta.parent / nome_processados
-            # os.mkdir(pasta_processados)
-            # nome_pasta_bat = 'Batch_file'
-            # caminho_bat = os.path.join(pasta_processados, nome_pasta_bat)
-            # nome_pasta_garrafa = 'Arquivos_BTL'
-            # caminho_garrafa = os.path.join(pasta_processados, nome_pasta_garrafa)
-            # os.makedirs(caminho_garrafa)
-            # caminho_split = 'Processamento_split'
-            # pasta_split = os.path.join(pasta_processados, caminho_split)
-            # os.makedirs(pasta_split)
-            # caminho_plot = 'Processamento_seaplot'
-            # pasta_plot = os.path.join(pasta_processados, caminho_plot)
-            # os.makedirs(pasta_plot)
-            # caminho_relatorio = 'Relatório'
-            # pasta_relatorio = os.path.join(pasta_processados, caminho_relatorio)
-            # os.makedirs(pasta_relatorio)
-            # tabela_mrk = os.path.join(pasta_relatorio, 'Tabela_Scan.txt')
 
             
             # ESCREVENDO RELATÓRIO
@@ -952,17 +928,8 @@ while True:
                                 arquivo.write('\nstrip  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'strip.psa' + ' /f' + replace + '%1.cnv' + ' /o' +  str(pasta_processados))
                         if i == '19':
                             with open(bat, 'a') as arquivo:
-                                arquivo.write('\ntrans  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'trans.psa' + ' /f' + replace + '%1.cnv' + ' /o' +  str(pasta_processados))
-       #                 if i == '20':
-        #                    with open(bat, 'a') as arquivo:
-         #                       arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
-          #                  confere_seaplot = input('Você gostaria de fazer o processamento do seaplot_ts? (s/n)\nCaso sua escolha for "s", coloque o seaplot_ts.psa, dessa forma, nos Arquivos_PSA.').lower()
-           #                 if confere_seaplot == 's':
-            #                    with open(bat, 'a') as arquivo:
-             #                       arquivo.write('\nseaplot  /i' + str(pasta_split) + '//' + str('d'+replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'seaplot_ts.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
-                        
+                                arquivo.write('\ntrans  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'trans.psa' + ' /f' + replace + '%1.cnv' + ' /o' +  str(pasta_processados))                        
                 
-                        
                         if i == '20':
                             with open(bat, 'a') as arquivo:
                                 arquivo.write('\nseaplot  /i' + str(pasta_processados) + '//' + str(replace) + '%1.cnv' + ' ' + '/p' + str(name_psa) + 'SeaPlot_compare_c.psa' + ' /f' + replace + '%1.jpg' + ' /o' +  str(pasta_plot))
